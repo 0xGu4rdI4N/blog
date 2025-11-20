@@ -11,7 +11,8 @@ export async function generateStaticParams() {
 }
 
 export default async function Post({ params }) {
-    const postData = await getPostData(params.slug);
+    const { slug } = params;
+    const postData = await getPostData(slug);
 
     return (
         <article className="pt-32 pb-24 px-6 max-w-3xl mx-auto">
