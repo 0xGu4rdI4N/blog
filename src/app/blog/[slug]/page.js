@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export async function generateStaticParams() {
     const paths = getAllPostIds();
-    return paths;
+    return paths.map(p => ({ slug: p.params.slug }));
 }
 
 export default async function Post({ params }) {
