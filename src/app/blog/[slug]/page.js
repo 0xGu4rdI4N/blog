@@ -1,4 +1,4 @@
-import { getPostData, getSortedPostsData } from '../../../../lib/posts';
+import { getPostData, getSortedPostsData } from '../../../lib/posts';
 import Link from 'next/link';
 import { ChevronLeft, Calendar, Clock } from 'lucide-react';
 
