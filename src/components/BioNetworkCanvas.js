@@ -12,24 +12,21 @@ export default function BioNetworkCanvas() {
         const ctx = canvas.getContext('2d');
         let animationFrameId;
         let particles = [];
-        let mouse = { x: null, y: null };
+        let mouse = { x: undefined, y: undefined };
 
-        // Set canvas size
-        const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
+        const bioColor = { r: 52, g: 211, b: 153 }; // emerald-500
+        const mlColor = { r: 139, g: 92, b: 246 };  // violet-500
+        const lineBase = { r: 150, g: 150, b: 150 };
 
-        // Particle class
         class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.radius = Math.random() * 2 + 1;
+                this.vx = (Math.random() - 0.5) * 0.3;
+                this.vy = (Math.random() - 0.5) * 0.3;
+                this.size = Math.random() * 1.5 + 1;
+                this.type = Math.random() > 0.5 ? 'BIO' : 'ML';
+                this.color = this.type === 'BIO' ? bioColor : mlColor;
             }
 
             update() {
@@ -40,86 +37,104 @@ export default function BioNetworkCanvas() {
                 if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
-                // Mouse interaction
-                if (mouse.x !== null && mouse.y !== null) {
+                // Mouse interaction - repel particles
+                if (mouse.x !== undefined && mouse.y !== undefined) {
                     const dx = mouse.x - this.x;
                     const dy = mouse.y - this.y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 100) {
-                        this.x -= dx * 0.01;
-                        this.y -= dy * 0.01;
+                    const mouseDistance = 200;
+
+                    if (distance < mouseDistance) {
+                        const force = (mouseDistance - distance) / mouseDistance;
+                        this.x -= (dx / distance) * force * 0.5;
+                        this.y -= (dy / distance) * force * 0.5;
                     }
                 }
             }
 
             draw() {
                 ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(16, 185, 129, 0.6)'; // emerald-500
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 0.6)`;
                 ctx.fill();
             }
         }
 
-        // Initialize particles
-        const particleCount = 80;
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
-        }
+        const init = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            const particleCount = 40;
 
-        // Draw connections
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        };
+
         const drawConnections = () => {
+            const connectionDistance = 150;
+
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
-                    if (distance < 120) {
+                    if (distance < connectionDistance) {
                         ctx.beginPath();
+                        const opacity = 1 - distance / connectionDistance;
+
+                        // Stronger connections between same-type particles
+                        if (particles[i].type === particles[j].type) {
+                            const c = particles[i].color;
+                            ctx.strokeStyle = `rgba(${c.r}, ${c.g}, ${c.b}, ${opacity * 0.15})`;
+                        } else {
+                            ctx.strokeStyle = `rgba(${lineBase.r}, ${lineBase.g}, ${lineBase.b}, ${opacity * 0.1})`;
+                        }
+
+                        ctx.lineWidth = 1;
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 * (1 - distance / 120)})`; // violet-500
-                        ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
                 }
             }
         };
 
-        // Animation loop
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            drawConnections();
 
             particles.forEach(particle => {
                 particle.update();
                 particle.draw();
             });
 
-            drawConnections();
             animationFrameId = requestAnimationFrame(animate);
         };
 
-        // Mouse move event
         const handleMouseMove = (e) => {
             mouse.x = e.clientX;
             mouse.y = e.clientY;
         };
 
         const handleMouseLeave = () => {
-            mouse.x = null;
-            mouse.y = null;
+            mouse.x = undefined;
+            mouse.y = undefined;
         };
 
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('mouseleave', handleMouseLeave);
+        window.addEventListener('resize', init);
 
+        init();
         animate();
 
-        // Cleanup
         return () => {
-            window.removeEventListener('resize', resizeCanvas);
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseleave', handleMouseLeave);
+            window.removeEventListener('resize', init);
             cancelAnimationFrame(animationFrameId);
         };
     }, []);
@@ -127,7 +142,8 @@ export default function BioNetworkCanvas() {
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 -z-10 bg-slate-950"
+            className="fixed inset-0 -z-10 pointer-events-none"
+            style={{ background: 'transparent' }}
         />
     );
 }
