@@ -40,6 +40,19 @@ export function getSortedPostsData() {
   });
 }
 
+export function getAllPostIds() {
+  if (!fs.existsSync(postsDirectory)) return [];
+
+  const fileNames = fs.readdirSync(postsDirectory);
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        slug: fileName.replace(/\.md$/, ''),
+      },
+    };
+  });
+}
+
 export async function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
