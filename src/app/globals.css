@@ -3,12 +3,18 @@
 @tailwind utilities;
 
 :root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  /* slate-900 */
+  --emerald: #10b981;
+  --violet: #8b5cf6;
+}
+
+.dark {
   --background: #020617;
   /* slate-950 */
   --foreground: #f1f5f9;
   /* slate-100 */
-  --emerald: #10b981;
-  --violet: #8b5cf6;
 }
 
 body {

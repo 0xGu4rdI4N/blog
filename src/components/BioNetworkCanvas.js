@@ -16,7 +16,7 @@ export default function BioNetworkCanvas() {
 
         const bioColor = { r: 52, g: 211, b: 153 }; // emerald-500
         const mlColor = { r: 139, g: 92, b: 246 };  // violet-500
-        const lineBase = { r: 150, g: 150, b: 150 };
+        const lineBase = { r: 100, g: 100, b: 100 }; // Darker grey for visibility on white
 
         class Particle {
             constructor() {
