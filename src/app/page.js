@@ -39,14 +39,14 @@ export default function Home() {
                         </div>
 
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-slate-100">
-                            Hi, I'm Raunak. <br />
+                            hi, i'm raunak. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-violet-600 dark:from-emerald-500 dark:to-violet-600">
-                                Bio-Computational Researcher.
+                                a curious self proclaimed ai4science researcher, trying to find magna carta moment of biology and ai.
                             </span>
                         </h1>
 
                         <p className="text-lg leading-relaxed mb-12 text-slate-600 dark:text-slate-400">
-                            I sit at the intersection of biology and artificial intelligence, interpreting biological signals as high-dimensional data structures.
+                            i study and try to figure out things in biology and ai (and ofcourse maths and physics).
                         </p>
 
                         {/* What I'm Building */}
@@ -57,8 +57,7 @@ export default function Home() {
                                     <Target size={22} /> What I'm Building Next
                                 </h4>
                                 <p className="leading-relaxed text-slate-700 dark:text-slate-300">
-                                    My primary focus is developing <strong>foundational models for cell biology</strong>.
-                                    I aim to apply geometric deep learning to accelerate drug discovery.
+                                    currently working on cryo-em imaging, unified plms. exploring neuroevolutionary networks, along with nnps.
                                 </p>
                             </div>
 
