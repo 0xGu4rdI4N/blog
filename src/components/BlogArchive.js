@@ -54,7 +54,7 @@ export default function BlogArchive({ posts }) {
                             {groupedPosts[year].map(post => (
                                 <Link
                                     key={post.id}
-                                    href={`/blog/${post.id}`}
+                                    href={`/writings/${post.id}`}
                                     className="cursor-pointer group relative p-6 rounded-2xl border transition-all bg-white dark:bg-neutral-900/30 border-slate-200 dark:border-neutral-800 hover:bg-slate-50 dark:hover:bg-neutral-900 hover:border-slate-300 dark:hover:border-neutral-700"
                                 >
                                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">

@@ -18,7 +18,7 @@ export default async function Post({ params }) {
 
     return (
         <article className="pt-32 pb-24 px-6 max-w-3xl mx-auto">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-emerald-500 mb-8 transition-colors">
+            <Link href="/writings" className="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-emerald-500 mb-8 transition-colors">
                 <ChevronLeft size={16} /> Back to Archive
             </Link>
 

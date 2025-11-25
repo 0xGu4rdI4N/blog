@@ -116,13 +116,13 @@ export default function Home() {
                         <div className="border rounded-2xl p-6 backdrop-blur-sm bg-slate-50 dark:bg-neutral-900/20 border-slate-200 dark:border-neutral-800">
                             <div className="grid gap-4">
                                 {recentPosts.map(post => (
-                                    <Link key={post.id} href={`/blog/${post.id}`} className="cursor-pointer hover:opacity-70">
+                                    <Link key={post.id} href={`/writings/${post.id}`} className="cursor-pointer hover:opacity-70">
                                         <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">{post.title}</h3>
                                         <span className="text-xs font-mono text-slate-500">{post.date}</span>
                                     </Link>
                                 ))}
                             </div>
-                            <Link href="/blog" className="w-full mt-6 py-3 text-sm rounded-lg transition-colors border border-dashed text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-neutral-800 border-slate-300 dark:border-neutral-700 block text-center">
+                            <Link href="/writings" className="w-full mt-6 py-3 text-sm rounded-lg transition-colors border border-dashed text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-neutral-800 border-slate-300 dark:border-neutral-700 block text-center">
                                 View Archive
                             </Link>
                         </div>
