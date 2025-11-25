@@ -1,8 +1,10 @@
 import Link from 'next/link';
-import { EXTRAS } from '../../lib/data';
+import { getSortedExtrasData } from '../../lib/extras';
 import { Lightbulb, Link as LinkIcon, Wrench, Quote, ArrowRight } from 'lucide-react';
 
 export default function ExtrasPage() {
+    const extras = getSortedExtrasData();
+
     return (
         <div className="pt-32 px-6 pb-20 max-w-6xl mx-auto relative z-10">
             <div className="mb-16 text-center max-w-2xl mx-auto">
@@ -14,7 +16,7 @@ export default function ExtrasPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
-                {EXTRAS.map((item) => (
+                {extras.map((item) => (
                     <div key={item.id} className="p-6 rounded-2xl border transition-all hover:-translate-y-1 duration-300 bg-white dark:bg-neutral-900/50 border-slate-200 dark:border-neutral-800 hover:border-slate-300 dark:hover:border-neutral-700">
                         <div className="flex items-center justify-between mb-4">
                             <div className={`p-2 rounded-lg ${item.type === 'insight' ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400' :

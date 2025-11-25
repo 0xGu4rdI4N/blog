@@ -36,35 +36,4 @@ export const TIMELINE_ITEMS = [
     }
 ];
 
-export const EXTRAS = [
-    {
-        id: 1,
-        type: 'insight',
-        title: "Noise is a feature",
-        content: "Biological systems aren't just noisy; they are often noise-driven. Deterministic models fail because they treat stochasticity as a bug, whereas evolution treats it as a search strategy.",
-        date: '2024-03-10'
-    },
-    {
-        id: 2,
-        type: 'link',
-        title: "The Bitter Lesson",
-        content: "Rich Sutton's essay on why general methods that leverage computation ultimately triumph over human-designed priors. Essential reading for AI Bio.",
-        url: "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
-        date: '2024-02-28'
-    },
-    {
-        id: 3,
-        type: 'tool',
-        title: "PyMOL 3.0",
-        content: "The new rendering engine in PyMOL 3.0 is a game changer for visualizing protein surfaces. Finally supports real-time ray tracing without plugins.",
-        date: '2024-01-15'
-    },
-    {
-        id: 4,
-        type: 'quote',
-        title: "On Complexity",
-        content: "The interesting thing about biology is that it is typically more complex than we think it is, but simpler than we think it must be.",
-        author: "Unknown",
-        date: '2023-12-20'
-    }
-];
+
