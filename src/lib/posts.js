@@ -18,7 +18,7 @@ export function getSortedPostsData() {
   if (!fs.existsSync(postsDirectory)) return [];
 
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const allPostsData = fileNames.filter(fileName => fileName.endsWith('.md')).map((fileName) => {
     const id = fileName.replace(/\.md$/, '');
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
