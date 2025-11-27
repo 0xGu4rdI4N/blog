@@ -41,9 +41,13 @@ export default function Home() {
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-slate-900 dark:text-slate-100">
                             hi, i'm raunak. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-violet-600 dark:from-emerald-500 dark:to-violet-600">
-                                a curious self proclaimed ai4science researcher, trying to find magna carta moment of biology and ai.
+                                a curious researcher
                             </span>
                         </h1>
+
+                        <p className="text-xl md:text-2xl font-medium mb-8 text-slate-700 dark:text-slate-300">
+                            self proclaimed ai4science researcher, trying to find magna carta moment of biology and ai.
+                        </p>
 
                         <p className="text-lg leading-relaxed mb-12 text-slate-600 dark:text-slate-400">
                             i study and try to figure out things in biology and ai (and ofcourse maths and physics).
@@ -66,15 +70,17 @@ export default function Home() {
                                 <h4 className="font-bold mb-6 flex items-center gap-2 text-slate-900 dark:text-slate-200">
                                     <History size={20} /> Journey So Far
                                 </h4>
-                                <div className="relative border-l-2 ml-3 space-y-8 border-slate-200 dark:border-neutral-800">
-                                    {TIMELINE_ITEMS.map((item, index) => (
-                                        <div key={index} className="relative pl-8">
-                                            <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full border-2 bg-white dark:bg-neutral-950 border-emerald-500"></div>
-                                            <span className="text-xs font-mono mb-1 block text-emerald-600 dark:text-emerald-500">{item.year}</span>
-                                            <h5 className="font-semibold text-lg text-slate-800 dark:text-slate-200">{item.title}</h5>
-                                            <p className="text-sm text-slate-600 dark:text-slate-500">{item.desc}</p>
-                                        </div>
-                                    ))}
+                                <div className="max-h-96 overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-neutral-800 scrollbar-track-transparent">
+                                    <div className="relative border-l-2 ml-3 space-y-8 border-slate-200 dark:border-neutral-800 pb-2">
+                                        {TIMELINE_ITEMS.map((item, index) => (
+                                            <div key={index} className="relative pl-8">
+                                                <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full border-2 bg-white dark:bg-neutral-950 border-emerald-500"></div>
+                                                <span className="text-xs font-mono mb-1 block text-emerald-600 dark:text-emerald-500">{item.year}</span>
+                                                <h5 className="font-semibold text-lg text-slate-800 dark:text-slate-200">{item.title}</h5>
+                                                <p className="text-sm text-slate-600 dark:text-slate-500">{item.desc}</p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>

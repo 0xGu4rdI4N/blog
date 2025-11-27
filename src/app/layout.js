@@ -14,7 +14,7 @@ const merriweather = Merriweather({
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata = {
-  title: "Raunak | Bio-Computational Researcher",
+  title: "Raunak",
   description: "Exploring the intersection of Biology and ML.",
 };
 
