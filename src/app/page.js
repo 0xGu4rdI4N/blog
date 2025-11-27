@@ -46,11 +46,7 @@ export default function Home() {
                         </h1>
 
                         <p className="text-xl md:text-2xl font-medium mb-8 text-slate-700 dark:text-slate-300">
-                            self proclaimed ai4science researcher, trying to find magna carta moment of biology and ai.
-                        </p>
-
-                        <p className="text-lg leading-relaxed mb-12 text-slate-600 dark:text-slate-400">
-                            i study and try to figure out things in biology and ai (and ofcourse maths and physics).
+                            interested in ai4science, trying to find magna carta moment of biology and ai.
                         </p>
 
                         {/* What I'm Building */}
@@ -61,7 +57,8 @@ export default function Home() {
                                     <Target size={22} /> What I'm Building Next
                                 </h4>
                                 <p className="leading-relaxed text-slate-700 dark:text-slate-300">
-                                    currently working on cryo-em imaging, unified plms. exploring neuroevolutionary networks, along with nnps.
+                                    currently working on cryo-em imaging, unified plms.
+                                    exploring neuroevolutionary networks, along with nnps.
                                 </p>
                             </div>
 
