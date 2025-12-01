@@ -1,5 +1,5 @@
 ---
-type: 'link'
+type: 'article'
 title: "You and Your Research by Richard Hamming"
 url: "https://fs.blog/great-talks/richard-hamming-your-research/"
 date: '2025-11-28'
