@@ -53,6 +53,37 @@ export function getAllPostIds() {
   });
 }
 
+import { visit } from 'unist-util-visit';
+
+// ... imports ...
+
+// Custom plugin to transform custom tags
+function rehypeCustomTags() {
+  return (tree) => {
+    visit(tree, 'element', (node) => {
+      if (node.tagName === 'cent') {
+        node.tagName = 'div';
+        node.properties = node.properties || {};
+        node.properties.style = 'text-align: center;';
+      }
+      if (node.tagName === 'pink') {
+        node.tagName = 'div';
+        node.properties = node.properties || {};
+        node.properties.style = 'border-left: 4px solid #ec4899; background-color: #fdf2f8; padding: 1rem; border-radius: 8px; margin: 1rem 0;';
+        // Add dark mode styles if possible, but inline styles are tricky for dark mode. 
+        // Alternatively, we can assign a class and rely on Tailwind/Global CSS. 
+        // Let's try assigning a class instead for better dark mode support.
+        node.properties.className = ['pink-callout'];
+        // We will remove the inline style for background/border color and move it to global css?
+        // User asked for "pink left border", let's stick to inline for simplicity or use Tailwind classes if rehype allows classNames that Tailwind picks up (it might not if not safelisted).
+        // Since we are using Tailwind, let's try using Tailwind classes directly.
+        // "border-l-4 border-pink-500 bg-pink-50 dark:bg-pink-950/30 rounded-lg p-4 my-4"
+        node.properties.className = ['border-l-4', 'border-pink-500', 'bg-pink-50', 'dark:bg-pink-900/20', 'rounded-lg', 'p-4', 'my-4'];
+      }
+    });
+  };
+}
+
 export async function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -63,10 +94,11 @@ export async function getPostData(id) {
   const processedContent = await unified()
     .use(remarkParse)
     .use(remarkMath)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeCustomTags) // Custom plugin
     .use(rehypeKatex) // Render Math
     .use(rehypePrism, { showLineNumbers: true }) // Render Code
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .process(matterResult.content);
 
   const contentHtml = processedContent.toString();

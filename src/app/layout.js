@@ -29,9 +29,11 @@ export default function RootLayout({ children }) {
         {/* One Dark theme for Prism Code Blocks */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
       </head>
-      <body className="bg-white dark:bg-neutral-950 text-slate-900 dark:text-slate-300 transition-colors duration-300">
+      <body className="bg-white dark:bg-neutral-950 text-black dark:text-white transition-colors duration-300 antialiased">
         <Navbar />
-        {children}
+        <main className="min-h-screen">
+          {children}
+        </main>
       </body>
     </html>
   );
