@@ -86,6 +86,14 @@ function remarkCustomDirectives() {
             ...attributes,
           };
         }
+
+        if (node.name === 'footer') {
+          data.hName = 'footer';
+          data.hProperties = {
+            className: ['mt-12', 'pt-6', 'border-t', 'border-slate-200', 'dark:border-neutral-800', 'text-sm', 'text-slate-500', 'dark:text-slate-400', 'italic'],
+            ...attributes,
+          };
+        }
       }
     });
   };
