@@ -26,3 +26,9 @@ The root of all this, Nature, which generates the data, the process which we oft
 Laplace famously articulated this vision in 1814, proposing a hypothetical intellect, often referred to as "Laplace's Demon," which, if it knew the precise position and momentum of every particle in the universe at a single instant, could calculate the entire future of the cosmos with absolute certainty. For Laplace, "nothing would be uncertain and the future, as the past, would be present to its eyes". 
 Imagine a controlled environment where a its completely vacuum but a ball is moving at a constant velocity *v*, now we can deterministically say that after *t* seconds, the ball will be moving with *v* velocity. The environment was so simple, that we easily intuitively knew the latent variable which here was nothing. 
 
+Due to our incomplete knowledge of the world and the emergence of stochasticity out of this ignorance, the field of Machine Learning has been forced to abandon the deterministic dream of $Y = f(X)$ in favor of the probabilistic reality of $P(Y|X)$. 
+In this stochastic sense, a deterministic model is much less intelligent since its throwing away the information which is there in the disribution. 
+<pink>The raw material of ML is not "truth," but "observation." </pink>
+A valid doubt would be, but all models look so deterministic, for eg. a linear regression model, given a the input, will *deterministically predict* the output. The model inherently is probabilitic, its just we report the MAP/Mean and not the distribution. 
+
+
