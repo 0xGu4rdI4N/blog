@@ -26,16 +26,16 @@ Here is a quick reference for the formatting options available on this site:
 - **Superscript**: `<sup>text</sup>` -> <sup>text</sup>
 - **Subscript**: `<sub>text</sub>` -> <sub>text</sub>
 - **Centering**:
-  ```html
-  <cent>
-    Centered Text
-  </cent>
+  ```markdown
+  :::cent
+  Centered Text
+  :::
   ```
 - **Pink Callout**:
-  ```html
-  <pink>
-    This is a sweet pink block!
-  </pink>
+  ```markdown
+  :::pink
+  This is a sweet pink block!
+  :::
   ```
 - **Special Characters**:
   - Star: `★` or `&starf;`
