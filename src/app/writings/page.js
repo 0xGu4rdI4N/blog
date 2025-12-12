@@ -13,7 +13,7 @@ export default function Blog() {
                 </Link>
                 <h1 className="text-4xl font-bold mb-4 text-slate-900 dark:text-slate-100">Writing</h1>
                 <p className="text-slate-600 dark:text-slate-400">
-                    Archive of thoughts on computational biology, mathematics, and code.
+                    These are some articles which excited me to explore.
                 </p>
             </div>
 

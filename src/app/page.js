@@ -20,10 +20,10 @@ export default function Home() {
 
                 <div className="space-y-6 text-gray-800 dark:text-gray-300 leading-relaxed">
                     <p>
-                        Hey! I'm interested in <strong>AI for Science</strong>, trying to find the magna carta moment of biology and AI.
+                        I'm interested in <strong>AI for Science</strong>, trying to find the magna carta moment of biology and AI.
                     </p>
                     <p>
-                        Currently working on cryo-em imaging and unified PLMs. Also exploring neuroevolutionary networks and NNPs.
+                        Currently working on cryo-em imaging, unified PLMs & protein design. Also exploring neuroevolutionary networks and NNPs.
                     </p>
 
                     {/* Emphasized Line (Optional, mimicking the reference) */}
@@ -32,8 +32,7 @@ export default function Home() {
                     </p> */}
 
                     <p>
-                        I write about my learnings and random thoughts (<Link href="/writings" className="text-emerald-600 hover:underline">blog</Link>),
-                        and I'm also active on <a href="https://github.com" className="text-emerald-600 hover:underline">GitHub</a>.
+                        I write about my learnings and random thoughts (<Link href="/writings" className="text-emerald-600 hover:underline">blog</Link>).
                     </p>
                 </div>
 
@@ -100,11 +99,10 @@ export default function Home() {
             {/* Cool Stuff / Extras */}
             <section>
                 <h2 className="font-serif text-2xl font-bold mb-6 text-black dark:text-white">
-                    Stuff I find cool
+                    Things I find cool
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Symmetry-aware methods, biomolecule design, protein/molecular dynamics,
-                    mechanistic interpretability of LLMs.
+                    Drug Discovery, Molecular Dynamics, Protein Design, Geometric Deep Learning, Colors, Physics induced Models
                 </p>
             </section>
         </div>

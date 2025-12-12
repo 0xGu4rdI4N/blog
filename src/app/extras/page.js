@@ -9,7 +9,7 @@ export default function ExtrasPage() {
             <div className="mb-12">
                 <h1 className="font-serif text-4xl font-bold mb-4 text-black dark:text-white">Extras</h1>
                 <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                    A collection of micro-thoughts, books, videos, and articles. My public notebook.
+                    A collection of articles, blogs, videos and books which I found a lot exciting.
                 </p>
             </div>
 

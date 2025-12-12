@@ -4,8 +4,11 @@ date: '2025-12-12'
 readTime: ''
 ---
 In the present paradigm of machine learning, what we all are quite familiar with is that these models are probabilistic in nature and it tries to model a distribution of the data.
+
 But why aren't we deterministic, isn't that what hyper-intelligent models be like?
+
 In quite some long time of history, things have been deterministic right? the laws of motion, the kepler laws of planetary motion, the law of thermodynamics*.
+
 Well, so it seems, for many of the observable behavior of the universe, things have been deterministic because despite nature being wildly complex, at an aggregate level( *observable behaviour* ), many variables cancel out. for eg.
 
 1. Countless forces on a falling object → but motion is a parabola
@@ -48,3 +51,7 @@ A valid doubt would be, but all models look so deterministic, for eg. a linear r
 :::cent
 *Noise  = Uncertainity = (Epistemic + Aleatoric) noise*
 :::
+Epistemic uncertainty arises due to our incomplete knowledge of the world and the underlying processes. The latent variables that affect the process are unknown to us. With more data, we reduce this certainity.
+Aleatoric uncertainty is the so called inherent randomness in the data generation process. It captures the noise that is intrinsic to the phenomenon being observed. Crucially, aleatoric uncertainty cannot be reduced by collecting more data. It is a property of the data distribution itself. This is the variables which can't be resolved at macroscopic level.
+
+But I believe its also just our ignorance of the true latent variables for this cause-effect relationship. Every event has a cause, so if outcomes look random, it’s because we haven’t identified the true complete state. 
