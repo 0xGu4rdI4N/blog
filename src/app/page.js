@@ -38,13 +38,13 @@ export default function Home() {
 
                 {/* Social Links */}
                 <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-emerald-600 dark:text-emerald-400 text-sm font-medium">
-                    <a href="https://github.com/0xGu4rdI4N" className="hover:underline">github</a>
-                    <span className="text-gray-300">/</span>
-                    <a href="https://www.linkedin.com/in/raunak-kumar-10b7692a1/" className="hover:underline">linkedin</a>
+                    <a href="https://x.com/Gu4rd_I4N" className="hover:underline">x (twitter)</a>
                     <span className="text-gray-300">/</span>
                     <a href="mailto:email@example.com" className="hover:underline">email</a>
                     <span className="text-gray-300">/</span>
                     <a href="#" className="hover:underline">cv</a>
+                    <span className="text-gray-300">/</span>
+                    <a href="https://github.com/0xGu4rdI4N" className="hover:underline">github</a>
                 </div>
             </header>
 
@@ -102,7 +102,7 @@ export default function Home() {
                     Things I find cool
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Drug Discovery, Molecular Dynamics, Protein Design, Geometric Deep Learning, <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Colors</span>, Physics induced Models
+                    Drug Discovery, Molecular Dynamics, Protein Design, Geometric Deep Learning, <span className="font-bold"><span className="text-rose-500">C</span><span className="text-orange-500">o</span><span className="text-amber-500">l</span><span className="text-green-500">o</span><span className="text-blue-500">r</span><span className="text-indigo-500">s</span></span>, Physics induced Models
                 </p>
             </section>
         </div>
