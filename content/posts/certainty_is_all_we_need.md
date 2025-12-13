@@ -9,7 +9,7 @@ But why aren't we deterministic, isn't that what hyper-intelligent models be lik
 
 In quite some long time of history, things have been deterministic right? the laws of motion, the kepler laws of planetary motion, the law of thermodynamics*.
 
-Well, so it seems, for many of the observable behavior of the universe, things have been deterministic because despite nature being wildly complex, at an aggregate level( *observable behaviour* ), many variables cancel out. for eg.
+Well, so it seems, for many of the observable behavior of the universe, things have been deterministic because despite nature being wildly complex, at an aggregate level(*observable behaviour*), many variables cancel out. for eg.
 
 1. Countless forces on a falling object → but motion is a parabola
 2. A pendulum
