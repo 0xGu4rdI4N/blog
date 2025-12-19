@@ -3,6 +3,7 @@ title: 'certainity is all we need?'
 date: '2025-12-12'
 type: 'fundamental'
 ---
+## 1. Why is data probabilistic?
 In the present paradigm of machine learning, what we all are quite familiar with is that these models are probabilistic in nature and it tries to model a distribution of the data.
 
 But why aren't we deterministic, isn't that what hyper-intelligent models be like?
@@ -55,6 +56,19 @@ Epistemic uncertainty arises due to our incomplete knowledge of the world and th
 Aleatoric uncertainty is the so called inherent randomness in the data generation process. It captures the noise that is intrinsic to the phenomenon being observed. Crucially, aleatoric uncertainty cannot be reduced by collecting more data. It is a property of the data distribution itself. This is the variables which can't be resolved at macroscopic level.
 
 But I believe its also just our ignorance of the true latent variables for this cause-effect relationship. Every event has a cause, so if outcomes look random, it’s because we haven’t identified the true complete state. 
+
+## 2. What Does It Mean to “Model” Data? 
+
+If you give some thought, we often associate probability with the frequentist view that it is the relative occurence of an event. So are we teaching our model to just 
+
+
+
+
+
+
+
+
+
 
 :::footer
 I can see farther because I stand on the shoulder of giants who came before me. This is a gratitude to all those whom I couldnt explicitly cite but who made this transfer and expansion of knowedge possible.

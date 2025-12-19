@@ -8,17 +8,17 @@ export default function Home() {
     const recentPosts = getSortedPostsData().slice(0, 3);
 
     return (
-        <div className="max-w-2xl mx-auto px-6 pt-20 pb-32">
+        <div className="max-w-2xl mx-auto px-6 pt-10 pb-10">
             {/* Header */}
-            <header className="mb-16">
+            <header className="mb-8">
                 <h1 className="font-serif text-4xl font-bold mb-2 text-black dark:text-white">
                     Raunak
                 </h1>
-                <p className="text-lg italic text-gray-600 dark:text-gray-400 mb-6">
-                    Curious researcher, exploring AI & Biology
+                <p className="text-lg italic text-gray-600 dark:text-gray-400 mb-4">
+                    Undergraduate @IITR, exploring AI & Biology
                 </p>
 
-                <div className="space-y-6 text-gray-800 dark:text-gray-300 leading-relaxed">
+                <div className="space-y-3 text-gray-800 dark:text-gray-300 leading-relaxed">
                     <p>
                         I'm interested in <strong>AI for Science</strong>, trying to find the magna carta moment of biology and AI.
                     </p>
@@ -37,23 +37,23 @@ export default function Home() {
                 </div>
 
                 {/* Social Links */}
-                <div className="mt-8 flex flex-wrap gap-x-4 gap-y-2 text-emerald-600 dark:text-emerald-400 text-sm font-medium">
+                <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-emerald-600 dark:text-emerald-400 text-sm font-medium">
                     <a href="https://x.com/Gu4rd_I4N" className="hover:underline">x (twitter)</a>
                     <span className="text-gray-300">/</span>
                     <a href="mailto:email@example.com" className="hover:underline">email</a>
                     <span className="text-gray-300">/</span>
-                    <a href="#" className="hover:underline">cv</a>
+                    <a href="/cv.pdf" className="hover:underline">cv</a>
                     <span className="text-gray-300">/</span>
                     <a href="https://github.com/0xGu4rdI4N" className="hover:underline">github</a>
                 </div>
             </header>
 
             {/* Publications */}
-            <section className="mb-16">
-                <h2 className="font-serif text-2xl font-bold mb-6 text-black dark:text-white">
+            <section className="mb-8">
+                <h2 className="font-serif text-2xl font-bold mb-4 text-black dark:text-white">
                     Publications
                 </h2>
-                <div className="space-y-8">
+                <div className="space-y-6">
                     {PUBLICATIONS.length > 0 ? (
                         PUBLICATIONS.map((paper, i) => (
                             <div key={i}>
@@ -73,11 +73,11 @@ export default function Home() {
             </section>
 
             {/* Recent Writing */}
-            <section className="mb-16">
-                <h2 className="font-serif text-2xl font-bold mb-6 text-black dark:text-white">
+            <section className="mb-8">
+                <h2 className="font-serif text-2xl font-bold mb-4 text-black dark:text-white">
                     Recent Writing
                 </h2>
-                <ul className="space-y-4">
+                <ul className="space-y-3">
                     {recentPosts.map((post) => (
                         <li key={post.id} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                             <Link href={`/writings/${post.id}`} className="font-medium text-gray-900 dark:text-gray-100 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
@@ -89,7 +89,7 @@ export default function Home() {
                         </li>
                     ))}
                 </ul>
-                <div className="mt-6">
+                <div className="mt-4">
                     <Link href="/writings" className="text-sm text-emerald-600 hover:underline">
                         View all posts &rarr;
                     </Link>
@@ -98,7 +98,7 @@ export default function Home() {
 
             {/* Cool Stuff / Extras */}
             <section>
-                <h2 className="font-serif text-2xl font-bold mb-6 text-black dark:text-white">
+                <h2 className="font-serif text-2xl font-bold mb-4 text-black dark:text-white">
                     Things I find cool
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
