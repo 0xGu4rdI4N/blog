@@ -42,7 +42,7 @@ export default function Home() {
                     <span className="text-gray-300">/</span>
                     <a href="mailto:raunak0831@gmail.com" className="hover:underline">email</a>
                     <span className="text-gray-300">/</span>
-                    <a href="/cv.pdf" className="hover:underline">cv</a>
+                    <a href="/blog/cv.pdf" className="hover:underline">cv</a>
                     <span className="text-gray-300">/</span>
                     <a href="https://github.com/0xGu4rdI4N" className="hover:underline">github</a>
                 </div>

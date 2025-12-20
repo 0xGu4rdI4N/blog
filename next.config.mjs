@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export', // Enables static HTML generation
-    // basePath removed for root deployment
+    basePath: '/blog', // basePath for project deployment
     images: {
         unoptimized: true, // Required for GitHub Pages
     },
