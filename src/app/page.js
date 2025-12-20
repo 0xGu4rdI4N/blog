@@ -40,7 +40,7 @@ export default function Home() {
                 <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-emerald-600 dark:text-emerald-400 text-sm font-medium">
                     <a href="https://x.com/Gu4rd_I4N" className="hover:underline">x (twitter)</a>
                     <span className="text-gray-300">/</span>
-                    <a href="mailto:email@example.com" className="hover:underline">email</a>
+                    <a href="mailto:raunak0831@gmail.com" className="hover:underline">email</a>
                     <span className="text-gray-300">/</span>
                     <a href="/cv.pdf" className="hover:underline">cv</a>
                     <span className="text-gray-300">/</span>
