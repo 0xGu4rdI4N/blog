@@ -24,6 +24,11 @@ export default async function Post({ params }) {
 
             <header className="mb-12 text-center">
                 <div className="flex justify-center gap-2 mb-6">
+                    {postData.type && (
+                        <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider border rounded-full border-slate-200 dark:border-neutral-800 text-violet-600 dark:text-violet-400">
+                            {postData.type}
+                        </span>
+                    )}
                     {postData.tags && postData.tags.map(tag => (
                         <span key={tag} className="px-3 py-1 text-xs font-bold uppercase tracking-wider border rounded-full border-slate-200 dark:border-neutral-800 text-violet-600 dark:text-violet-400">
                             {tag}

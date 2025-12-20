@@ -13,6 +13,7 @@ export default function BlogArchive({ posts }) {
         return posts.filter(post =>
             post.title.toLowerCase().includes(lowerQ) ||
             (post.tags && post.tags.some(tag => tag.toLowerCase().includes(lowerQ))) ||
+            (post.type && post.type.toLowerCase().includes(lowerQ)) ||
             (post.excerpt && post.excerpt.toLowerCase().includes(lowerQ))
         );
     }, [searchQuery, posts]);
@@ -70,13 +71,14 @@ export default function BlogArchive({ posts }) {
                                             {post.excerpt}
                                         </p>
                                     )}
-                                    {post.tags && (
-                                        <div className="flex gap-2">
-                                            {post.tags.map(tag => (
-                                                <span key={tag} className="text-xs px-2 py-1 rounded-md bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-slate-400">#{tag}</span>
-                                            ))}
-                                        </div>
-                                    )}
+                                    <div className="flex gap-2">
+                                        {post.type && (
+                                            <span className="text-xs px-2 py-1 rounded-md bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-slate-400">#{post.type}</span>
+                                        )}
+                                        {post.tags && post.tags.map(tag => (
+                                            <span key={tag} className="text-xs px-2 py-1 rounded-md bg-slate-100 dark:bg-neutral-800 text-slate-600 dark:text-slate-400">#{tag}</span>
+                                        ))}
+                                    </div>
                                 </Link>
                             ))}
                         </div>
