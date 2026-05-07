@@ -59,9 +59,24 @@ import { visit } from 'unist-util-visit';
 
 import remarkDirective from 'remark-directive';
 
-// Custom plugin to handle remark directives (:::cent, :::pink)
+// Custom plugin to handle remark directives (:::cent, :::pink, :::references, :cite)
 function remarkCustomDirectives() {
   return (tree) => {
+    // First pass: collect all citation keys in order of appearance
+    const citationOrder = [];
+    const citationMap = new Map(); // key -> number
+
+    visit(tree, 'textDirective', (node) => {
+      if (node.name === 'cite') {
+        const key = node.children?.[0]?.value || '';
+        if (key && !citationMap.has(key)) {
+          citationOrder.push(key);
+          citationMap.set(key, citationOrder.length);
+        }
+      }
+    });
+
+    // Second pass: transform all directives
     visit(tree, (node) => {
       if (
         node.type === 'containerDirective' ||
@@ -91,6 +106,32 @@ function remarkCustomDirectives() {
           data.hName = 'footer';
           data.hProperties = {
             className: ['mt-12', 'pt-6', 'border-t', 'border-slate-200', 'dark:border-neutral-800', 'text-sm', 'text-slate-500', 'dark:text-slate-400', 'italic'],
+            ...attributes,
+          };
+        }
+
+        // Handle :cite[key] text directive
+        if (node.name === 'cite' && node.type === 'textDirective') {
+          const key = node.children?.[0]?.value || '';
+          const num = citationMap.get(key) || '?';
+          data.hName = 'a';
+          data.hProperties = {
+            href: `#ref-${key}`,
+            id: `cite-${key}`,
+            className: ['citation-link'],
+            title: `Citation: ${key}`,
+            ...attributes,
+          };
+          // Replace children with the citation number
+          node.children = [{ type: 'text', value: `[${num}]` }];
+        }
+
+        // Handle :::references container directive
+        if (node.name === 'references' && node.type === 'containerDirective') {
+          data.hName = 'section';
+          data.hProperties = {
+            id: 'references',
+            className: ['references-section'],
             ...attributes,
           };
         }

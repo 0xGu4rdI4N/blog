@@ -63,3 +63,12 @@ Use triple backticks with the language name.
 
 **Quotes**
 > This is a blockquote.
+
+**Citations**
+- In-text: `:cite[key]` → Renders as superscript [1], [2], etc.
+- References section:
+  ```markdown
+  :::references
+  - key: Author. "Title." *Journal*, Year.
+  :::
+  ```

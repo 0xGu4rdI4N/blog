@@ -39,31 +39,38 @@ export default function ExtrasList({ items }) {
             {/* List */}
             <div className="space-y-12">
                 {filteredItems.map((item) => (
-                    <div key={item.id} className="group">
-                        <div className="flex items-baseline justify-between mb-1">
-                            <h3 className="text-lg font-bold text-black dark:text-white">
-                                {item.title || "Untitled"}
-                            </h3>
-                            <span className="text-xs font-mono text-gray-400 shrink-0 ml-4">
-                                {item.date}
-                            </span>
-                        </div>
-
-                        <div className="text-gray-700 dark:text-gray-300 leading-relaxed mb-2">
-                            {item.content}
-                        </div>
-
-                        {item.url && (
-                            <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-600 hover:underline inline-flex items-center gap-1">
-                                Source <ArrowRight size={12} />
-                            </a>
-                        )}
-
-                        {item.author && (
-                            <div className="text-sm text-gray-500 italic mt-1">
-                                — {item.author}
+                    <div key={item.id} className="group flex gap-6">
+                        {item.image && (
+                            <div className="shrink-0 mt-1">
+                                <img src={item.image} alt={item.title || "Cover Image"} className="w-24 sm:w-28 h-auto rounded shadow-sm object-cover border border-gray-200 dark:border-gray-800" />
                             </div>
                         )}
+                        <div className="flex-1">
+                            <div className="flex items-baseline justify-between mb-1">
+                                <h3 className="text-lg font-bold text-black dark:text-white">
+                                    {item.title || "Untitled"}
+                                </h3>
+                                <span className="text-xs font-mono text-gray-400 shrink-0 ml-4">
+                                    {item.date}
+                                </span>
+                            </div>
+
+                            <div className="text-gray-700 dark:text-gray-300 leading-relaxed mb-2 text-sm sm:text-base">
+                                {item.content}
+                            </div>
+
+                            {item.url && (
+                                <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-600 hover:underline inline-flex items-center gap-1">
+                                    Source <ArrowRight size={12} />
+                                </a>
+                            )}
+
+                            {item.author && (
+                                <div className="text-sm text-gray-500 italic mt-1">
+                                    — {item.author}
+                                </div>
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>

@@ -9,7 +9,8 @@ export function getSortedExtrasData() {
     if (!fs.existsSync(extrasDirectory)) return [];
 
     const fileNames = fs.readdirSync(extrasDirectory);
-    const allExtrasData = fileNames.map((fileName) => {
+    const mdFiles = fileNames.filter(fileName => fileName.endsWith('.md'));
+    const allExtrasData = mdFiles.map((fileName) => {
         // Remove ".md" from file name to get id
         const id = fileName.replace(/\.md$/, '');
 
