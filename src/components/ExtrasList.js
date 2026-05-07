@@ -50,9 +50,6 @@ export default function ExtrasList({ items }) {
                                 <h3 className="text-lg font-bold text-black dark:text-white">
                                     {item.title || "Untitled"}
                                 </h3>
-                                <span className="text-xs font-mono text-gray-400 shrink-0 ml-4">
-                                    {item.date}
-                                </span>
                             </div>
 
                             <div className="text-gray-700 dark:text-gray-300 leading-relaxed mb-2 text-sm sm:text-base">
