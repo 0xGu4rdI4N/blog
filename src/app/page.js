@@ -20,10 +20,10 @@ export default function Home() {
 
                 <div className="space-y-3 text-gray-800 dark:text-gray-300 leading-relaxed">
                     <p>
-                        I'm interested in <strong>AI for Science</strong>, trying to find the magna carta moment of biology and AI.
+                        I'm interested in <strong>AI for Science</strong>, trying to find the magna carta moment of biology and AI. Biological systems should be the next frontier to uncover the fundamental theories of physics and chemistry.
                     </p>
                     <p>
-                        Currently working on cryo-em imaging, unified PLMs & protein design. Also exploring neuroevolutionary networks and NNPs.
+                        I believe the next gen models should be blended with core scientific theories and be physics-informed by inducing inductive biases of human learn heuristics.
                     </p>
 
                     {/* Emphasized Line (Optional, mimicking the reference) */}
