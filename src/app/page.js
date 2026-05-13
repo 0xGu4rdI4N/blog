@@ -16,7 +16,7 @@ export default function Home() {
                 <aside className="lg:col-span-3 space-y-4 order-2 lg:order-1">
                     <div className="bg-stone-50 dark:bg-neutral-900/50 border border-stone-200 dark:border-neutral-800 rounded-2xl p-5 shadow-sm">
                         <div className="flex flex-col items-center text-center mb-4">
-                            <div className="w-16 h-16 bg-stone-200 dark:bg-neutral-800 rounded-xl mb-3 flex items-center justify-center overflow-hidden border border-stone-300 dark:border-neutral-700 shadow-inner">
+                            <div className="w-28 h-28 bg-stone-200 dark:bg-neutral-800 rounded-xl mb-3 flex items-center justify-center overflow-hidden border border-stone-300 dark:border-neutral-700 shadow-inner">
                                 <img src="/blog/images/profile.jpg" alt="Raunak" className="w-full h-full object-cover" />
                             </div>
                             <h2 className="text-[10px] font-bold tracking-widest uppercase text-stone-400 mb-1">Present Commitments</h2>
