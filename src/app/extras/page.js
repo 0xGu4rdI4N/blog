@@ -1,8 +1,8 @@
 import { getSortedExtrasData } from '../../lib/extras';
 import ExtrasList from '../../components/ExtrasList';
 
-export default function ExtrasPage() {
-    const extras = getSortedExtrasData();
+export default async function ExtrasPage() {
+    const extras = await getSortedExtrasData();
 
     return (
         <div className="max-w-2xl mx-auto px-6 pt-20 pb-32">

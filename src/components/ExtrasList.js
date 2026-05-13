@@ -42,7 +42,7 @@ export default function ExtrasList({ items }) {
                     <div key={item.id} className="group flex gap-6">
                         {item.image && (
                             <div className="shrink-0 mt-1">
-                                <img src={`/blog${item.image}`} alt={item.title || "Cover Image"} className="w-24 sm:w-28 h-auto rounded shadow-sm object-cover border border-gray-200 dark:border-gray-800" />
+                                <img src={item.image.startsWith('http') ? item.image : `/blog${item.image}`} alt={item.title || "Cover Image"} className="w-24 sm:w-28 h-auto rounded shadow-sm object-cover border border-gray-200 dark:border-gray-800" />
                             </div>
                         )}
                         <div className="flex-1">
