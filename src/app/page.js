@@ -9,20 +9,20 @@ export default function Home() {
     const recentPosts = getSortedPostsData().slice(0, 3);
 
     return (
-        <div className="max-w-6xl mx-auto px-6 pt-10 pb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                
+        <div className="max-w-6xl mx-auto px-6 pt-6 pb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
                 {/* Left Sidebar: Present Commitments */}
-                <aside className="lg:col-span-3 space-y-8 order-2 lg:order-1">
-                    <div className="bg-stone-50 dark:bg-neutral-900/50 border border-stone-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm">
-                        <div className="flex flex-col items-center text-center mb-6">
-                            <div className="w-24 h-24 bg-stone-200 dark:bg-neutral-800 rounded-xl mb-4 flex items-center justify-center overflow-hidden border border-stone-300 dark:border-neutral-700 shadow-inner">
+                <aside className="lg:col-span-3 space-y-4 order-2 lg:order-1">
+                    <div className="bg-stone-50 dark:bg-neutral-900/50 border border-stone-200 dark:border-neutral-800 rounded-2xl p-5 shadow-sm">
+                        <div className="flex flex-col items-center text-center mb-4">
+                            <div className="w-16 h-16 bg-stone-200 dark:bg-neutral-800 rounded-xl mb-3 flex items-center justify-center overflow-hidden border border-stone-300 dark:border-neutral-700 shadow-inner">
                                 <img src="/blog/images/profile.jpg" alt="Raunak" className="w-full h-full object-cover" />
                             </div>
-                            <h2 className="text-xs font-bold tracking-widest uppercase text-stone-400 mb-1">Present Commitments</h2>
+                            <h2 className="text-[10px] font-bold tracking-widest uppercase text-stone-400 mb-1">Present Commitments</h2>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             <div className="flex gap-3">
                                 <Target size={16} className="text-rose-500 mt-1 shrink-0" />
                                 <div className="text-sm">
@@ -42,7 +42,7 @@ export default function Home() {
                                 <GraduationCap size={16} className="text-blue-500 mt-1 shrink-0" />
                                 <div className="text-sm">
                                     <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Education</p>
-                                    <p className="text-stone-700 dark:text-stone-300">Undergraduate Researcher @ <span className="font-semibold">IITR</span></p>
+                                    <p className="text-stone-700 dark:text-stone-300">Undergraduate Student @ <span className="font-semibold">IITR</span></p>
                                 </div>
                             </div>
                         </div>
@@ -51,17 +51,17 @@ export default function Home() {
 
                 {/* Main Content */}
                 <main className="lg:col-span-6 order-1 lg:order-2">
-                    <header className="mb-12">
-                        <h1 className="font-serif text-5xl font-bold mb-2 text-black dark:text-white">
+                    <header className="mb-6">
+                        <h1 className="font-serif text-4xl font-bold mb-2 text-black dark:text-white">
                             Raunak
                         </h1>
-                        <p className="text-lg italic text-gray-600 dark:text-gray-400 mb-6">
+                        <p className="text-base italic text-gray-600 dark:text-gray-400 mb-4">
                             Undergraduate @IITR, exploring AI & Biology
                         </p>
 
-                        <div className="space-y-4 text-gray-800 dark:text-gray-300 text-lg leading-relaxed">
+                        <div className="space-y-2 text-gray-800 dark:text-gray-300 text-[15px] leading-relaxed">
                             <p>
-                                I'm interested in <strong>AI for Science</strong>, trying to find the magna carta moment of biology and AI. Biological systems should be the next frontier to uncover the fundamental theories of physics and chemistry.
+                                I'm interested in <strong>AI4Science</strong>, trying to find the magna carta moment of biology and AI. Biological systems should be the next frontier to uncover the fundamental theories of physics and chemistry.
                             </p>
                             <p>
                                 I believe the next gen models should be blended with core scientific theories and be physics-informed by inducing inductive biases from heuristics learnt over millions of years.
@@ -72,23 +72,23 @@ export default function Home() {
                         </div>
 
                         {/* Social Links */}
-                        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-emerald-600 dark:text-emerald-400 font-medium">
-                            <a href="https://x.com/Gu4rd_I4N" className="hover:underline flex items-center gap-2">x (twitter)</a>
+                        <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-emerald-600 dark:text-emerald-400 text-sm font-medium">
+                            <a href="https://x.com/Gu4rd_I4N" className="hover:underline flex items-center gap-1">x (twitter)</a>
                             <span className="text-gray-300">/</span>
-                            <a href="mailto:raunak0831@gmail.com" className="hover:underline flex items-center gap-2">email</a>
+                            <a href="mailto:raunak0831@gmail.com" className="hover:underline flex items-center gap-1">email</a>
                             <span className="text-gray-300">/</span>
-                            <a href="/blog/cv.pdf" className="hover:underline flex items-center gap-2">cv</a>
+                            <a href="/blog/cv.pdf" className="hover:underline flex items-center gap-1">cv</a>
                             <span className="text-gray-300">/</span>
-                            <a href="https://github.com/0xGu4rdI4N" className="hover:underline flex items-center gap-2">github</a>
+                            <a href="https://github.com/0xGu4rdI4N" className="hover:underline flex items-center gap-1">github</a>
                         </div>
                     </header>
 
                     {/* Publications */}
-                    <section className="mb-12">
-                        <h2 className="font-serif text-2xl font-bold mb-6 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-2">
+                    <section className="mb-6">
+                        <h2 className="font-serif text-xl font-bold mb-3 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-1">
                             Publications
                         </h2>
-                        <div className="space-y-8">
+                        <div className="space-y-4">
                             {PUBLICATIONS.length > 0 ? (
                                 PUBLICATIONS.map((paper, i) => (
                                     <div key={i} className="group">
@@ -108,13 +108,13 @@ export default function Home() {
                     </section>
 
                     {/* Recent Writing */}
-                    <section className="mb-12">
-                        <h2 className="font-serif text-2xl font-bold mb-6 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-2">
+                    <section className="mb-6">
+                        <h2 className="font-serif text-xl font-bold mb-3 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-1">
                             Recent Writing
                         </h2>
-                        <ul className="space-y-4">
+                        <ul className="space-y-2">
                             {recentPosts.map((post) => (
-                                <li key={post.id} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 group">
+                                <li key={post.id} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 group text-[15px]">
                                     <Link href={`/writings/${post.id}`} className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-emerald-600 transition-colors">
                                         {post.title}
                                     </Link>
@@ -124,7 +124,7 @@ export default function Home() {
                                 </li>
                             ))}
                         </ul>
-                        <div className="mt-6">
+                        <div className="mt-3">
                             <Link href="/writings" className="inline-flex items-center text-sm font-bold text-emerald-600 hover:gap-2 transition-all">
                                 View all posts <ChevronRight size={14} />
                             </Link>
@@ -133,10 +133,10 @@ export default function Home() {
 
                     {/* Things I find cool */}
                     <section>
-                        <h2 className="font-serif text-2xl font-bold mb-6 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-2">
+                        <h2 className="font-serif text-xl font-bold mb-3 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-1">
                             Things I find cool
                         </h2>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                             {["Drug Discovery", "Interpretability", "Protein Design", "Geometric Deep Learning", "Physics induced Models"].map(tag => (
                                 <span key={tag} className="px-3 py-1 bg-stone-100 dark:bg-neutral-900 text-stone-600 dark:text-neutral-400 rounded-full text-sm border border-stone-200 dark:border-neutral-800">
                                     {tag}
@@ -150,13 +150,13 @@ export default function Home() {
                 </main>
 
                 {/* Right Sidebar: Past Commitments */}
-                <aside className="lg:col-span-3 space-y-8 order-3">
-                    <div className="bg-stone-50 dark:bg-neutral-900/50 border border-stone-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm">
-                        <div className="mb-6">
-                            <h2 className="text-xs font-bold tracking-widest uppercase text-stone-400 text-center">Past Commitments</h2>
+                <aside className="lg:col-span-3 space-y-4 order-3">
+                    <div className="bg-stone-50 dark:bg-neutral-900/50 border border-stone-200 dark:border-neutral-800 rounded-2xl p-5 shadow-sm">
+                        <div className="mb-4">
+                            <h2 className="text-[10px] font-bold tracking-widest uppercase text-stone-400 text-center">Past Commitments</h2>
                         </div>
 
-                        <div className="space-y-6">
+                        <div className="space-y-4">
                             <div className="flex gap-3">
                                 <Calendar size={16} className="text-stone-400 mt-1 shrink-0" />
                                 <div className="text-sm">
@@ -172,9 +172,9 @@ export default function Home() {
                                 <div className="text-sm">
                                     <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Past Role</p>
                                     <p className="text-stone-800 dark:text-stone-200 leading-snug">
-                                        Research Intern @ <span className="font-semibold">Bio-Lab</span>
+                                        Research Intern @ <span className="font-semibold"><a href="https://mandrakebio.com">MandrakeBio</a></span>
                                     </p>
-                                    <p className="text-[10px] text-stone-400 mt-0.5">Summer 2023</p>
+                                    <p className="text-[10px] text-stone-400 mt-0.5">Winter 2025</p>
                                 </div>
                             </div>
 
@@ -183,7 +183,7 @@ export default function Home() {
                                 <div className="text-sm">
                                     <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Milestone</p>
                                     <p className="text-stone-800 dark:text-stone-200 leading-snug">
-                                        KVPY Fellow
+                                        Amgen Scholar
                                     </p>
                                 </div>
                             </div>
