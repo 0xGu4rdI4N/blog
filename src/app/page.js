@@ -13,7 +13,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
                 {/* Left Sidebar: Present Commitments */}
-                <aside className="lg:col-span-3 space-y-4 order-2 lg:order-1">
+                <aside className="lg:col-span-3 space-y-4 order-1">
                     <div className="bg-stone-50 dark:bg-neutral-900/50 border border-stone-200 dark:border-neutral-800 rounded-2xl p-5 shadow-sm">
                         <div className="flex flex-col items-center text-center mb-4">
                             <div className="w-28 h-28 bg-stone-200 dark:bg-neutral-800 rounded-xl mb-3 flex items-center justify-center overflow-hidden border border-stone-300 dark:border-neutral-700 shadow-inner">
@@ -50,7 +50,7 @@ export default function Home() {
                 </aside>
 
                 {/* Main Content */}
-                <main className="lg:col-span-6 order-1 lg:order-2">
+                <main className="lg:col-span-6 order-2">
                     <header className="mb-6">
                         <h1 className="font-serif text-4xl font-bold mb-2 text-black dark:text-white">
                             Raunak
