@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "subtomogram",
+      "label": "Subtomogram Alignment",
+      "type": "project",
+      "status": "active",
+      "description": "A novel mathematical formulation for template-free alignment of cryo-ET subtomograms.",
+      "tags": ["Structural Biology", "Math", "Algorithms"],
+      "links": []
+    },
+    {
+      "id": "amp_design",
+      "label": "AMP Design",
+      "type": "project",
+      "status": "active",
+      "description": "Identification and generative designing of Antimicrobial Peptides (AMPs).",
+      "tags": ["Drug Discovery", "Generative AI"],
+      "links": []
+    },
+    {
+      "id": "tda_eeg",
+      "label": "Cognitive Workload via TDA",
+      "type": "project",
+      "status": "past",
+      "description": "Classification of cognitive workload states from EEG signals using Topological Data Analysis.",
+      "tags": ["Neuroscience", "TDA", "ML"],
+      "links": []
+    },
+    { "id": "cryoet", "label": "Cryo-ET", "type": "concept" },
+    { "id": "geometric_dl", "label": "Geometric Deep Learning", "type": "tool" },
+    { "id": "tda", "label": "Topological Data Analysis", "type": "tool" },
+    { "id": "genai", "label": "Generative Models", "type": "tool" },
+    { "id": "struct_bio", "label": "Structural Biology", "type": "domain" },
+    { "id": "drug_disc", "label": "Drug Discovery", "type": "domain" },
+    { "id": "neuro", "label": "Cognitive Neuroscience", "type": "domain" }
+  ],
+  "links": [
+    { "source": "subtomogram", "target": "cryoet", "label": "applied to" },
+    { "source": "subtomogram", "target": "geometric_dl", "label": "uses" },
+    { "source": "subtomogram", "target": "struct_bio", "label": "part of" },
+    { "source": "amp_design", "target": "genai", "label": "uses" },
+    { "source": "amp_design", "target": "drug_disc", "label": "part of" },
+    { "source": "tda_eeg", "target": "tda", "label": "uses" },
+    { "source": "tda_eeg", "target": "neuro", "label": "part of" }
+  ]
+}
