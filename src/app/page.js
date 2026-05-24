@@ -80,6 +80,8 @@ export default function Home() {
                             <a href="/blog/cv.pdf" className="hover:underline flex items-center gap-1">cv</a>
                             <span className="text-gray-300">/</span>
                             <a href="https://github.com/0xGu4rdI4N" className="hover:underline flex items-center gap-1">github</a>
+                            <span className="text-gray-300">/</span>
+                            <a href="https://www.linkedin.com/in/raunak-kumar-10b7692a1" className="hover:underline flex items-center gap-1">linkedin</a>
                         </div>
                     </header>
 
