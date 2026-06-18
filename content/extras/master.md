@@ -65,3 +65,15 @@ author: "Fei-Fei Li"
 ---
 
 An autobiography and a fascinating look into the evolution of artificial intelligence from one of its foremost pioneers.
+***
+---
+type: 'article'
+title: "Principles of Effective Research "
+url: "https://michaelnielsen.org/blog/principles-of-effective-research/"
+date: '2026-06-18'
+---
+Its a reread to remind of yourself about doing effective research. I believe as we must notics our weakness to get over them, we must always remind ourselves of our qualities, vision and how we strive to do it. 
+
+***
+
+---
