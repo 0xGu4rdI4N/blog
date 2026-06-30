@@ -37,5 +37,5 @@ Ideally the performace across the classes should have been same due to their sym
 
 
 :::footer
-I can look farther because I stand on the shoulder of giants who came before me. This is a gratitude to all those whom I couldnt explicitly cite but who made this transfer and expansion of knowedge possible.
+I can look farther because I stand on the shoulder of giants. This is a gratitude to all those whom I couldnt explicitly cite but who made this transfer and expansion of knowedge possible.
 :::

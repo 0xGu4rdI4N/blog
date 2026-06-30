@@ -1,7 +1,7 @@
 ---
-title: 'Deep Evidential Regression: A Review'
+title: 'Uncertainty Quantification using Deep Evidential Regression'
 date: '2026-06-30'
-type: 'fundamental, uq, regression'
+type: 'uq, regression'
 ---
 
 This is a follow-up article from [Amitesh's post on Evidential Learning](https://amiteshbadkul.github.io/blog/2026/evidential-learning/), which covers uncertainty quantification (UQ) for discrete classification tasks. It's a great pre-read. 
@@ -10,7 +10,7 @@ Citing from the same, imagine an image classification model trained on car vs. t
 
 In this article, we will review the [Deep Evidential Regression paper](https://arxiv.org/pdf/1910.02600) by A. Amini :cite[amini2020]. It's a workaround of the original [Evidential Deep Learning paper by Sensoy](https://arxiv.org/pdf/1806.01768) :cite[sensoy2018], to enable UQ on regression tasks.
 
-**Epistemic uncertainty is:** "How much does the model not know about the true function at this point?" It can be both high in the In-Distribution (ID) region and low in the Out-Of-Distribution (OOD) region. ID/OOD is a statement about the **data distribution**. Epistemic uncertainty is a statement about **model knowledge**.
+**Epistemic uncertainty is:** "How much does the model not know about the true function at this point?" It can be both high in the In-Distribution (ID) region and low in the Out-Of-Distribution (OOD) region. While ID/OOD is a statement about the **data distribution**, epistemic uncertainty is a statement about **model knowledge**.
 
 Precise and calibrated uncertainty estimates are useful for interpreting confidence, capturing domain shift of out-of-distribution (OOD) test samples, and recognizing when the model is likely to fail.
 
@@ -32,8 +32,8 @@ $$ p(y_1, \dots, y_N | \mu, \sigma^2) = \prod_{i=1}^N \frac{1}{\sqrt{2\pi\sigma^
 
 Here it's saying that all targets are sampled from a common normal distribution, but this is vague, because each task output is dependent on the corresponding $x_i$. So the paper is being slightly loose. It really means:
 
-- **Independent** — yes, strictly
-- **Identically distributed** — only in the sense that the same network generates all $(\mu_i, \sigma_i^2)$, not that every sample comes from the literal same Gaussian.
+- **Independent** : yes, strictly speaking.
+- **Identically distributed** : only in the sense that the same network generates all $(\mu_i, \sigma_i^2)$, not that every sample comes from the literal same Gaussian.
 
 > A better setting would have been:
 > $$y_i | x_i \sim \mathcal{N}(\mu_i, \sigma_i^2)$$
@@ -50,11 +50,9 @@ We say:
 - *"yᵢ comes from a Gaussian, but we don't even know μᵢ and σᵢ² exactly, they are themselves random variables."*
 
 This embeds the learning of epistemic uncertainty into the learning of the model. 
-
+:::pink
 *NOTE: In the normal MLE settings, the model would have learnt $(\mu_i, \sigma_i^2) = f(x_i; w)$ which only covers the aleatoric uncertainty, i.e., $\sigma_i^2$.*
-
-$$ \underbrace{p(\mu, \sigma^2 | y_1, \dots, y_N)}_{\text{Posterior}} = \frac{\underbrace{p(y_1, \dots, y_N | \mu, \sigma^2)}_{\text{Likelihood}} \underbrace{p(\mu, \sigma^2)}_{\text{Prior}}}{p(y_1, \dots, y_N)} $$
-
+:::
 Again, the paper does its sloppy act and talks of computing a posterior over $\mu$ and $\sigma^2$ given the examples. This didn't make sense to me, so I reasoned a lot with Claude over this and we came to a common decision.
 
 <details>
@@ -97,13 +95,14 @@ From the paper:
 *"Third, we can effectively estimate the epistemic or model uncertainty associated with the network's prediction by simply evaluating the variance of our inferred evidential distribution."* (Amini et al., p. 4)
 
 $$ \text{Var}[\mu] = \frac{\beta}{\nu (\alpha - 1)} $$
+This is the term representing the epistemic uncertainty, how much certain is the the model of the prediction. A lower variance of $\mu$ means the model is more certain of the prediction.
 
 **Remember:**
 The virtual observation interpretation says: higher $\nu, \alpha$ means more evidence, meaning the model has "seen more support" for its prediction. The implicit promise is that evidence should grow as the model sees more of a particular input region.
 
 ---
 
-## 3.3 Learning the evidential distribution
+## Learning the evidential distribution
 
 *"For clarity, we structure the learning process as a multi-task learning problem, with two distinct parts: (1) acquiring or maximizing model evidence in support of our observations and (2) minimizing evidence or inflating uncertainty when the prediction is wrong."* (Amini et al., p. 4) 
 
@@ -115,7 +114,7 @@ $$ p(y_i | m) = \iint p(y_i | \mu, \sigma^2) p(\mu, \sigma^2 | m) d\mu d\sigma^2
 
 Ignore the middle part, then it's simply a weighted average over the probability distribution. In Maximum Likelihood Estimate, we use the point estimate:
 
-$$ \mathcal{L}_i(w) = -\log p(y_i | \hat{\mu}, \hat{\sigma}^2) $$
+$$ p(y_i | \hat{\mu}, \hat{\sigma}^2) $$
 
 But since now we have a distribution over $\mu$ and $\sigma^2$ as well, we use a weighted average. We know $p(y | \mu, \sigma^2)$ is Gaussian and we chose $p(\mu, \sigma^2 | m)$ as NIG, and so this intractable solution becomes tractable as:
 
@@ -126,6 +125,8 @@ where $\text{St}(y; \mu_{St}, \sigma^2_{St}, \nu_{St})$ is the Student-t distrib
 Applying NLL on this gives:
 
 $$ \mathcal{L}_i^{NLL}(w) = \frac{1}{2} \log \left( \frac{\pi}{\nu} \right) - \alpha \log\left( 2\beta(1+\nu) \right) + \left( \alpha + \frac{1}{2} \right) \log \left( 2\beta(1+\nu) + \nu (y_i - \gamma)^2 \right) + \log \left( \frac{\Gamma(\alpha)}{\Gamma(\alpha+1/2)} \right) $$
+
+In this section our aim is to design an objective using which the model learns to output correct predictions for the training data points. Without any constraints the model can just learn to be highly confident everywhere, because these NN's can span any function and it would be easy for them to just overfit on the training examples atleat in terms of its certainty. This is not what we want, so we add a regularization term.
 
 ### (2) Minimizing evidence on errors
 
@@ -139,17 +140,27 @@ $$ \mathcal{L}_i^R(w) = |y_i - \gamma| \cdot (2\nu + \alpha) $$
 
 This loss imposes a penalty whenever there is an error in the prediction and scales with the total evidence of our inferred posterior.
 
+:::pink
+**NOTE:** 
+This is the most important part because it is here that we can design the objective or what being uncertain means for us. So, in the paper they have used the heuristic that uncertainty should be high when the prediction is wrong. This intuitively seems right as well but there can be other ways to define this as well. We can design a method which assigns uncertainty based on the density of training examples it has seen in that region. Remember we defined Evidential learning to be *evidence acquisition process* which actually should be framed with how many examples the model has seen that are similar to the present one. I am open to discussing more on this, so please feel free to reach out to me on my [mail](mailto:guardian1265@gmail.com) or [x](https://x.com/Gu4rd_I4N).
+
+:::
+
 The total loss, $\mathcal{L}_i(w)$, consists of the two loss terms for maximizing and regularizing evidence, scaled by a regularization coefficient, $\lambda$:
 
 $$\mathcal{L}_i(w) = \mathcal{L}_i^{NLL}(w) + \lambda \mathcal{L}_i^{R}(w)$$
 
 :::pink
 **Loophole:** 
-The regularizer conflates two fundamentally different failure modes: prediction error due to in-distribution data noise, and prediction error due to out-of-distribution inputs. For in-distribution training points where the model errs, the NLL loss and the regularizer send contradictory signals simultaneously: the former pushes the predicted mean toward the target while the latter penalizes evidence, effectively teaching the model to be uncertain in a region it should instead be learning. A principled regularizer would need to distinguish between these two cases rather than treating prediction error as a uniform proxy for epistemic uncertainty.
+The regularizer mixes two fundamentally different failure modes: prediction error due to in-distribution data noise, and prediction error due to out-of-distribution inputs. For in-distribution training points where the model errs, the NLL loss and the regularizer send contradictory signals simultaneously: the former pushes the predicted mean toward the target while the latter penalizes evidence, effectively teaching the model to be uncertain in a region where it has already learned or has evidence to be certain. A principled regularizer would need to distinguish between these two cases rather than treating prediction error as a uniform proxy for epistemic uncertainty.
 :::
 
 :::references
 - amini2020: Amini, A., Schwarting, W., Soleimany, A., & Rus, D. "Deep Evidential Regression." *Advances in Neural Information Processing Systems*, 2020. [Link](https://arxiv.org/pdf/1910.02600)
 - sensoy2018: Sensoy, M., Kaplan, L., & Kandemir, M. "Evidential Deep Learning to Quantify Classification Uncertainty." *Advances in Neural Information Processing Systems*, 2018. [Link](https://arxiv.org/pdf/1806.01768)
 - blundell2015: Blundell, C., Cornebise, J., Kavukcuoglu, K., & Wierstra, D. "Weight Uncertainty in Neural Networks." *ICML*, 2015.
+:::
+
+:::footer
+I can look farther because I stand on the shoulder of giants. This is a gratitude to all those whom I couldnt explicitly cite but who made this transfer and expansion of knowedge possible.
 :::
