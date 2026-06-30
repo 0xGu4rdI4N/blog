@@ -161,6 +161,8 @@ The regularizer mixes two fundamentally different failure modes: prediction erro
 - blundell2015: Blundell, C., Cornebise, J., Kavukcuoglu, K., & Wierstra, D. "Weight Uncertainty in Neural Networks." *ICML*, 2015.
 :::
 
+**Use of AI:** Yes, I used a lot of AI to understand and used some sentences where I found it did a really good job explaining the objective, but overall this is my review with my findings and shortcomings, so enjoy learning!
+
 :::footer
 I can look farther because I stand on the shoulder of giants. This is a gratitude to all those whom I couldnt explicitly cite but who made this transfer and expansion of knowedge possible.
 :::
