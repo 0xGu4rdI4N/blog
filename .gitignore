@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# startup-watch
+scripts/watch/node_modules
+scripts/watch/package-lock.json

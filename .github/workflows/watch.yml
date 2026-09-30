@@ -1,0 +1,73 @@
+# Startup Watch: daily check of tracked startups' careers pages, email on new roles.
+# Data lives on the `watch-data` branch (watch.json) and is read by the /watch page on the blog.
+# Track a startup: open an issue titled `track` with the URL in the body (`untrack` to remove).
+name: Startup Watch
+
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 09:00 IST daily
+  workflow_dispatch:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    # only the repo owner can add/remove startups via issues
+    if: github.event_name != 'issues' || github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install mailer
+        run: cd scripts/watch && npm install --no-audit --no-fund
+
+      - name: Load data branch
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          REMOTE="https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git"
+          if git ls-remote --exit-code --heads "$REMOTE" watch-data >/dev/null 2>&1; then
+            git clone --quiet --branch watch-data --depth 1 "$REMOTE" data
+          else
+            mkdir data && git -C data init -q -b watch-data && git -C data remote add origin "$REMOTE"
+          fi
+
+      - name: Check startups
+        env:
+          TRACK_TITLE: ${{ github.event.issue.title }}
+          TRACK_BODY: ${{ github.event.issue.body }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/watch/run.js data/watch.json
+
+      - name: Save data
+        run: |
+          cd data
+          git config user.name "startup-watch[bot]"
+          git config user.email "startup-watch@users.noreply.github.com"
+          git add watch.json
+          git commit -q -m "watch: $(date -u +%F)" || echo "no changes"
+          git push -q origin watch-data
+
+      - name: Reply to issue
+        if: github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "$(cat data/_result.txt)"
+          gh issue close ${{ github.event.issue.number }}
