@@ -1,0 +1,154 @@
+{
+ "startups": [
+  {
+   "url": "https://hardwareintelligence.ai/",
+   "name": "Hardwareintelligence",
+   "id": "525bc552-eca1-45f3-9189-4ac256db2d48",
+   "addedAt": "2026-10-01T10:20:02.788Z",
+   "jobs": [],
+   "history": [
+    {
+     "at": "2026-10-01T10:20:03.073Z",
+     "count": 0
+    }
+   ],
+   "source": "none",
+   "error": null,
+   "newCount": 0,
+   "lastChecked": "2026-10-01T10:20:03.073Z"
+  },
+  {
+   "url": "https://cuebench.dev/",
+   "name": "Cuebench",
+   "id": "32ff0611-f5a9-4899-83ac-12d55a9f3ce3",
+   "addedAt": "2026-10-01T10:20:02.788Z",
+   "jobs": [
+    {
+     "title": "Research Engineers",
+     "url": "https://cuebench.dev/hiring.html",
+     "firstSeen": "2026-10-01T10:20:03.248Z",
+     "isNew": false
+    },
+    {
+     "title": "Life Science Specialists",
+     "url": "https://cuebench.dev/hiring.html",
+     "firstSeen": "2026-10-01T10:20:03.248Z",
+     "isNew": false
+    },
+    {
+     "title": "Inference Engineers",
+     "url": "https://cuebench.dev/hiring.html",
+     "firstSeen": "2026-10-01T10:20:03.248Z",
+     "isNew": false
+    },
+    {
+     "title": "Full-Stack Engineers",
+     "url": "https://cuebench.dev/hiring.html",
+     "firstSeen": "2026-10-01T10:20:03.248Z",
+     "isNew": false
+    }
+   ],
+   "history": [
+    {
+     "at": "2026-10-01T10:20:03.248Z",
+     "count": 4
+    }
+   ],
+   "source": "page",
+   "error": null,
+   "newCount": 0,
+   "lastChecked": "2026-10-01T10:20:03.248Z"
+  },
+  {
+   "url": "https://inkbox.ai/",
+   "name": "Inkbox",
+   "id": "19e2909e-6405-4632-886f-8cf7f8d1a2c5",
+   "addedAt": "2026-10-01T10:20:02.788Z",
+   "jobs": [],
+   "history": [
+    {
+     "at": "2026-10-01T10:20:03.671Z",
+     "count": 0
+    }
+   ],
+   "source": "none",
+   "error": null,
+   "newCount": 0,
+   "lastChecked": "2026-10-01T10:20:03.671Z"
+  },
+  {
+   "url": "https://www.agent37.com/",
+   "name": "Agent37",
+   "id": "0bcb3df5-dc13-4149-8a82-9fd8827897b9",
+   "addedAt": "2026-10-01T10:20:02.788Z",
+   "jobs": [],
+   "history": [
+    {
+     "at": "2026-10-01T10:20:04.854Z",
+     "count": 0
+    }
+   ],
+   "source": "none",
+   "error": null,
+   "newCount": 0,
+   "lastChecked": "2026-10-01T10:20:04.854Z"
+  },
+  {
+   "url": "https://www.archgen.tech/careers/",
+   "name": "Archgen",
+   "id": "6634cf58-bf14-48f1-9a43-582b6749bfc2",
+   "addedAt": "2026-10-01T10:20:02.788Z",
+   "jobs": [
+    {
+     "title": "Physical Design Engineer",
+     "url": "https://forms.gle/ZRnjnLaXP7TBMPJk8",
+     "location": "Bangalore",
+     "firstSeen": "2026-10-01T10:20:04.948Z",
+     "isNew": false
+    },
+    {
+     "title": "Machine Learning Engineer",
+     "url": "https://forms.gle/ZRnjnLaXP7TBMPJk8",
+     "location": "Bangalore",
+     "firstSeen": "2026-10-01T10:20:04.948Z",
+     "isNew": false
+    },
+    {
+     "title": "Go-To-Market (GTM) Lead",
+     "url": "https://forms.gle/ZRnjnLaXP7TBMPJk8",
+     "location": "Bangalore",
+     "firstSeen": "2026-10-01T10:20:04.948Z",
+     "isNew": false
+    }
+   ],
+   "history": [
+    {
+     "at": "2026-10-01T10:20:04.948Z",
+     "count": 3
+    }
+   ],
+   "source": "page",
+   "error": null,
+   "newCount": 0,
+   "lastChecked": "2026-10-01T10:20:04.948Z"
+  },
+  {
+   "url": "https://www.ycombinator.com/companies/hardware-intelligence/jobs",
+   "name": "Hardware Intelligence",
+   "id": "ec74867c-390f-44eb-b1fb-277dd0258fd9",
+   "addedAt": "2026-10-01T10:20:02.788Z",
+   "jobs": [],
+   "history": [
+    {
+     "at": "2026-10-01T10:20:05.590Z",
+     "count": 0
+    }
+   ],
+   "source": "yc",
+   "error": null,
+   "newCount": 0,
+   "lastChecked": "2026-10-01T10:20:05.590Z"
+  }
+ ],
+ "updatedAt": "2026-10-01T10:20:05.590Z"
+}
