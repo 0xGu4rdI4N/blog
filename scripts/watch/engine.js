@@ -214,7 +214,7 @@ async function notify(startups) {
       <ul style="padding-left:18px;margin:8px 0 0">${s.jobs.filter((j) => j.isNew).map((j) => `<li><a href="${esc(j.url || s.url)}" style="color:#5b5bf0">${esc(j.title)}</a>${j.location ? ` <span style="color:#6b7280">· ${esc(j.location)}</span>` : ''}</li>`).join('')}</ul>
     </div>`).join('') + `</div>`;
   const text = hit.map((s) => `${s.name}\n` + s.jobs.filter((j) => j.isNew).map((j) => `  - ${j.title} ${j.url || ''}`).join('\n')).join('\n\n');
-  try { await mailer().sendMail({ from: `Startup Watch <${process.env.SMTP_USER}>`, to: process.env.ALERT_TO, subject: `${total} new role${total > 1 ? 's' : ''}: ${hit.map((s) => s.name).join(', ')}`.slice(0, 120), text, html }); console.log(`alert sent: ${total} new roles`); }
+  try { await mailer().sendMail({ from: `Startup Watch <${process.env.SMTP_FROM || process.env.SMTP_USER}>`, to: process.env.ALERT_TO, subject: `${total} new role${total > 1 ? 's' : ''}: ${hit.map((s) => s.name).join(', ')}`.slice(0, 120), text, html }); console.log(`alert sent: ${total} new roles`); }
   catch (e) { console.error('email failed:', e.message); }
 }
 
