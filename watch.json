@@ -18,12 +18,16 @@
     {
      "at": "2026-10-03T09:18:51.239Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-04T09:58:19.942Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-03T09:18:51.239Z"
+   "lastChecked": "2026-10-04T09:58:19.942Z"
   },
   {
    "url": "https://cuebench.dev/",
@@ -68,12 +72,16 @@
     {
      "at": "2026-10-03T09:18:51.485Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-04T09:58:20.102Z",
+     "count": 4
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-03T09:18:51.485Z"
+   "lastChecked": "2026-10-04T09:58:20.102Z"
   },
   {
    "url": "https://inkbox.ai/",
@@ -93,12 +101,16 @@
     {
      "at": "2026-10-03T09:18:52.206Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-04T09:58:20.614Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-03T09:18:52.206Z"
+   "lastChecked": "2026-10-04T09:58:20.614Z"
   },
   {
    "url": "https://www.agent37.com/",
@@ -118,12 +130,16 @@
     {
      "at": "2026-10-03T09:18:53.209Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-04T09:58:21.298Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-03T09:18:53.209Z"
+   "lastChecked": "2026-10-04T09:58:21.298Z"
   },
   {
    "url": "https://www.archgen.tech/careers/",
@@ -165,12 +181,16 @@
     {
      "at": "2026-10-03T09:18:53.625Z",
      "count": 3
+    },
+    {
+     "at": "2026-10-04T09:58:21.386Z",
+     "count": 3
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-03T09:18:53.625Z"
+   "lastChecked": "2026-10-04T09:58:21.386Z"
   },
   {
    "url": "https://www.ycombinator.com/companies/hardware-intelligence/jobs",
@@ -190,13 +210,17 @@
     {
      "at": "2026-10-03T09:18:53.924Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-04T09:58:21.844Z",
+     "count": 0
     }
    ],
    "source": "yc",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-03T09:18:53.924Z"
+   "lastChecked": "2026-10-04T09:58:21.844Z"
   }
  ],
- "updatedAt": "2026-10-03T09:18:53.924Z"
+ "updatedAt": "2026-10-04T09:58:21.844Z"
 }
