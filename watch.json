@@ -1,6 +1,48 @@
 {
  "startups": [
   {
+   "id": "d25af095-a85a-4e99-96c4-c5d523eaff5e",
+   "url": "https://www.corvic.ai/careers/work-at-corvic",
+   "name": "Corvic",
+   "addedAt": "2026-10-07T09:25:54.063Z",
+   "jobs": [
+    {
+     "title": "Software Engineer, Platform Mountain View, CA · Full-time",
+     "url": "https://www.corvic.ai/careers/software-engineer-platform",
+     "firstSeen": "2026-10-07T09:25:54.336Z",
+     "isNew": false
+    },
+    {
+     "title": "Software Engineer Intern, Platform Mountain View, CA · Summer 2026 Internship",
+     "url": "https://www.corvic.ai/careers/software-engineer-intern-platform",
+     "firstSeen": "2026-10-07T09:25:54.336Z",
+     "isNew": false
+    },
+    {
+     "title": "ML Engineer, AI Platform Mountain View, CA · Full-time",
+     "url": "https://www.corvic.ai/careers/ml-engineer-ai-platform",
+     "firstSeen": "2026-10-07T09:25:54.336Z",
+     "isNew": false
+    },
+    {
+     "title": "ML Engineer Intern, AI Platform Mountain View, CA · Summer 2026 Internship",
+     "url": "https://www.corvic.ai/careers/ml-engineer-intern-ai-platform",
+     "firstSeen": "2026-10-07T09:25:54.336Z",
+     "isNew": false
+    }
+   ],
+   "history": [
+    {
+     "at": "2026-10-07T09:25:54.336Z",
+     "count": 4
+    }
+   ],
+   "source": "links",
+   "error": null,
+   "newCount": 0,
+   "lastChecked": "2026-10-07T09:25:54.336Z"
+  },
+  {
    "id": "20dfe827-9259-46e3-85b0-409a9965b015",
    "url": "https://www.workatastartup.com/companies/silimate",
    "name": "Workatastartup",
@@ -10,12 +52,16 @@
     {
      "at": "2026-10-06T16:51:45.316Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:25:55.194Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-06T16:51:45.316Z"
+   "lastChecked": "2026-10-07T09:25:55.194Z"
   },
   {
    "url": "https://hardwareintelligence.ai/",
@@ -51,12 +97,16 @@
     {
      "at": "2026-10-06T16:51:46.270Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:25:55.401Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-06T16:51:46.270Z"
+   "lastChecked": "2026-10-07T09:25:55.401Z"
   },
   {
    "url": "https://cuebench.dev/",
@@ -117,12 +167,16 @@
     {
      "at": "2026-10-06T16:51:46.617Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-07T09:25:55.915Z",
+     "count": 4
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-06T16:51:46.617Z"
+   "lastChecked": "2026-10-07T09:25:55.915Z"
   },
   {
    "url": "https://inkbox.ai/",
@@ -158,12 +212,16 @@
     {
      "at": "2026-10-06T16:51:47.660Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:25:56.268Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-06T16:51:47.660Z"
+   "lastChecked": "2026-10-07T09:25:56.268Z"
   },
   {
    "url": "https://www.agent37.com/",
@@ -199,12 +257,16 @@
     {
      "at": "2026-10-06T16:51:49.204Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:25:57.090Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-06T16:51:49.204Z"
+   "lastChecked": "2026-10-07T09:25:57.090Z"
   },
   {
    "url": "https://www.archgen.tech/careers/",
@@ -262,12 +324,16 @@
     {
      "at": "2026-10-06T16:51:49.515Z",
      "count": 3
+    },
+    {
+     "at": "2026-10-07T09:25:57.182Z",
+     "count": 3
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-06T16:51:49.515Z"
+   "lastChecked": "2026-10-07T09:25:57.182Z"
   },
   {
    "url": "https://www.ycombinator.com/companies/hardware-intelligence/jobs",
@@ -303,13 +369,17 @@
     {
      "at": "2026-10-06T16:51:49.794Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:25:57.418Z",
+     "count": 0
     }
    ],
    "source": "yc",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-06T16:51:49.794Z"
+   "lastChecked": "2026-10-07T09:25:57.418Z"
   }
  ],
- "updatedAt": "2026-10-06T16:51:49.794Z"
+ "updatedAt": "2026-10-07T09:25:57.418Z"
 }
