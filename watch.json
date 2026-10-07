@@ -35,12 +35,16 @@
     {
      "at": "2026-10-07T09:25:54.336Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-07T09:26:13.159Z",
+     "count": 4
     }
    ],
    "source": "links",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-07T09:25:54.336Z"
+   "lastChecked": "2026-10-07T09:26:13.159Z"
   },
   {
    "id": "20dfe827-9259-46e3-85b0-409a9965b015",
@@ -56,12 +60,16 @@
     {
      "at": "2026-10-07T09:25:55.194Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:26:14.132Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-07T09:25:55.194Z"
+   "lastChecked": "2026-10-07T09:26:14.132Z"
   },
   {
    "url": "https://hardwareintelligence.ai/",
@@ -101,12 +109,16 @@
     {
      "at": "2026-10-07T09:25:55.401Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:26:14.308Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-07T09:25:55.401Z"
+   "lastChecked": "2026-10-07T09:26:14.308Z"
   },
   {
    "url": "https://cuebench.dev/",
@@ -171,12 +183,16 @@
     {
      "at": "2026-10-07T09:25:55.915Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-07T09:26:14.568Z",
+     "count": 4
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-07T09:25:55.915Z"
+   "lastChecked": "2026-10-07T09:26:14.568Z"
   },
   {
    "url": "https://inkbox.ai/",
@@ -216,12 +232,16 @@
     {
      "at": "2026-10-07T09:25:56.268Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:26:15.048Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-07T09:25:56.268Z"
+   "lastChecked": "2026-10-07T09:26:15.048Z"
   },
   {
    "url": "https://www.agent37.com/",
@@ -261,12 +281,16 @@
     {
      "at": "2026-10-07T09:25:57.090Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-07T09:26:15.721Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-07T09:25:57.090Z"
+   "lastChecked": "2026-10-07T09:26:15.721Z"
   },
   {
    "url": "https://www.archgen.tech/careers/",
@@ -328,58 +352,17 @@
     {
      "at": "2026-10-07T09:25:57.182Z",
      "count": 3
+    },
+    {
+     "at": "2026-10-07T09:26:15.823Z",
+     "count": 3
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-07T09:25:57.182Z"
-  },
-  {
-   "url": "https://www.ycombinator.com/companies/hardware-intelligence/jobs",
-   "name": "Hardware Intelligence",
-   "id": "ec74867c-390f-44eb-b1fb-277dd0258fd9",
-   "addedAt": "2026-10-01T10:20:02.788Z",
-   "jobs": [],
-   "history": [
-    {
-     "at": "2026-10-01T10:20:05.590Z",
-     "count": 0
-    },
-    {
-     "at": "2026-10-02T09:57:04.997Z",
-     "count": 0
-    },
-    {
-     "at": "2026-10-03T09:18:53.924Z",
-     "count": 0
-    },
-    {
-     "at": "2026-10-04T09:58:21.844Z",
-     "count": 0
-    },
-    {
-     "at": "2026-10-05T10:43:07.400Z",
-     "count": 0
-    },
-    {
-     "at": "2026-10-06T10:35:37.174Z",
-     "count": 0
-    },
-    {
-     "at": "2026-10-06T16:51:49.794Z",
-     "count": 0
-    },
-    {
-     "at": "2026-10-07T09:25:57.418Z",
-     "count": 0
-    }
-   ],
-   "source": "yc",
-   "error": null,
-   "newCount": 0,
-   "lastChecked": "2026-10-07T09:25:57.418Z"
+   "lastChecked": "2026-10-07T09:26:15.823Z"
   }
  ],
- "updatedAt": "2026-10-07T09:25:57.418Z"
+ "updatedAt": "2026-10-07T09:26:15.823Z"
 }
