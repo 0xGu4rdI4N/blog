@@ -47,12 +47,16 @@
     {
      "at": "2026-10-08T10:47:39.904Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-09T10:46:24.887Z",
+     "count": 4
     }
    ],
    "source": "links",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-08T10:47:39.904Z"
+   "lastChecked": "2026-10-09T10:46:24.887Z"
   },
   {
    "id": "20dfe827-9259-46e3-85b0-409a9965b015",
@@ -80,12 +84,16 @@
     {
      "at": "2026-10-08T10:47:40.820Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-09T10:46:25.622Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-08T10:47:40.820Z"
+   "lastChecked": "2026-10-09T10:46:25.622Z"
   },
   {
    "url": "https://hardwareintelligence.ai/",
@@ -137,12 +145,16 @@
     {
      "at": "2026-10-08T10:47:41.209Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-09T10:46:25.834Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-08T10:47:41.209Z"
+   "lastChecked": "2026-10-09T10:46:25.834Z"
   },
   {
    "url": "https://cuebench.dev/",
@@ -219,12 +231,16 @@
     {
      "at": "2026-10-08T10:47:41.514Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-09T10:46:26.009Z",
+     "count": 4
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-08T10:47:41.514Z"
+   "lastChecked": "2026-10-09T10:46:26.009Z"
   },
   {
    "url": "https://inkbox.ai/",
@@ -276,12 +292,16 @@
     {
      "at": "2026-10-08T10:47:42.226Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-09T10:46:26.506Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-08T10:47:42.226Z"
+   "lastChecked": "2026-10-09T10:46:26.506Z"
   },
   {
    "url": "https://www.agent37.com/",
@@ -333,12 +353,16 @@
     {
      "at": "2026-10-08T10:47:43.360Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-09T10:46:28.656Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-08T10:47:43.360Z"
+   "lastChecked": "2026-10-09T10:46:28.656Z"
   },
   {
    "url": "https://www.archgen.tech/careers/",
@@ -412,13 +436,17 @@
     {
      "at": "2026-10-08T10:47:43.511Z",
      "count": 3
+    },
+    {
+     "at": "2026-10-09T10:46:28.754Z",
+     "count": 3
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-08T10:47:43.511Z"
+   "lastChecked": "2026-10-09T10:46:28.754Z"
   }
  ],
- "updatedAt": "2026-10-08T10:47:43.511Z"
+ "updatedAt": "2026-10-09T10:46:28.754Z"
 }
