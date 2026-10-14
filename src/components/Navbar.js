@@ -11,6 +11,7 @@ export default function Navbar() {
         { name: 'Home', path: '/' },
         { name: 'Research', path: '/research' },
         { name: 'Vision', path: '/vision' },
+        { name: 'Notes', path: '/notes' },
         { name: 'Labs', path: '/labs' },
         { name: 'Writings', path: '/writings' },
         { name: 'Extras', path: '/extras' },

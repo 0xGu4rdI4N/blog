@@ -31,6 +31,21 @@ export const EXPERIENCES = [
 
 export const TIMELINE_ITEMS = [];
 
+// Google Doc Live Embeds
+// To add a new one:
+//   1. In Google Docs → File → Share → Publish to web → Copy the link
+//   2. Add a new entry below with a unique slug, title, and that link as `docUrl`
+//   3. The page will be live at /notes/<slug>
+export const GDOC_EMBEDS = [
+    // Example (uncomment and fill in when you have a doc):
+    // {
+    //     slug: 'phd-resources',
+    //     title: 'PhD Application Resources',
+    //     description: 'A running list of resources, notes, and links for the PhD application process.',
+    //     docUrl: 'https://docs.google.com/document/d/YOUR_DOC_ID/pub',
+    // },
+];
+
 export const VISION = {
     paragraphs: [
         `I was sitting in the library, along the shelves where there was no one except me and thousands of books. I was looking at "The Cultural Heritage of India" by Ramkrishna Mission and really felt sad that I would not come to know the great authors of this book. In that moment, I also saw books that, in my opinion, would not have been read much — and a feeling of respect for the authors who write these books even if there is not a large quantitative audience. They are the guardians of our time, our story, our legacy to the future.`,
