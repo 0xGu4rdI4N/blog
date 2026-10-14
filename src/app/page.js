@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
-import { PUBLICATIONS } from '../lib/data';
+import { PUBLICATIONS, EXPERIENCES } from '../lib/data';
 import { User, Target, Briefcase, GraduationCap, Calendar, Award, BookOpen, ChevronRight, Globe } from 'lucide-react';
 
 export default function Home() {
@@ -81,7 +81,7 @@ export default function Home() {
                             <span className="text-gray-300">/</span>
                             <a href="https://github.com/0xGu4rdI4N" className="hover:underline flex items-center gap-1">github</a>
                             <span className="text-gray-300">/</span>
-                            <a href="https://www.linkedin.com/in/raunak-kumar-10b7692a1" className="hover:underline flex items-center gap-1">linkedin</a>
+                            <a href="https://www.linkedin.com/in/raunak-kumar" className="hover:underline flex items-center gap-1">linkedin</a>
                         </div>
                     </header>
 
@@ -95,10 +95,22 @@ export default function Home() {
                                 PUBLICATIONS.map((paper, i) => (
                                     <div key={i} className="group">
                                         <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100 group-hover:text-emerald-600 transition-colors">
-                                            {paper.title}
+                                            {paper.link ? (
+                                                <a href={paper.link} target="_blank" rel="noopener noreferrer" className="hover:underline inline-flex items-center gap-1.5">
+                                                    <span>{paper.title}</span>
+                                                    <span className="text-xs text-emerald-600 dark:text-emerald-400 font-mono">↗</span>
+                                                </a>
+                                            ) : (
+                                                paper.title
+                                            )}
                                         </h3>
+                                        {paper.authors && (
+                                            <p className="text-xs text-stone-600 dark:text-stone-400 mt-1">
+                                                {paper.authors}
+                                            </p>
+                                        )}
                                         <p className="text-sm text-stone-500 mb-2 italic">{paper.venue}</p>
-                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
                                             {paper.desc}
                                         </p>
                                     </div>
@@ -108,6 +120,39 @@ export default function Home() {
                             )}
                         </div>
                     </section>
+
+                    {/* Experience */}
+                    {EXPERIENCES && EXPERIENCES.length > 0 && (
+                        <section className="mb-6">
+                            <h2 className="font-serif text-xl font-bold mb-3 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-1">
+                                Experience
+                            </h2>
+                            <div className="space-y-4">
+                                {EXPERIENCES.map((exp, i) => (
+                                    <div key={i} className="group">
+                                        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                                            <h3 className="font-bold text-base text-gray-900 dark:text-gray-100 group-hover:text-emerald-600 transition-colors">
+                                                {exp.role} <span className="font-normal text-stone-500 dark:text-stone-400">· {exp.org}</span>
+                                            </h3>
+                                            <span className="text-xs text-stone-400 font-mono shrink-0">{exp.period}</span>
+                                        </div>
+                                        <p className="text-xs font-semibold text-stone-600 dark:text-stone-400 mt-0.5 mb-1 italic">
+                                            {exp.project}
+                                        </p>
+                                        <p className="text-stone-700 dark:text-stone-300 text-[14px] leading-relaxed">
+                                            {exp.desc}
+                                        </p>
+                                        {exp.highlight && (
+                                            <div className="mt-1.5 flex items-center gap-1.5 text-xs text-amber-600 dark:text-amber-400 font-medium">
+                                                <Award size={13} className="shrink-0" />
+                                                <span>{exp.highlight}</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
 
                     {/* Recent Writing */}
                     <section className="mb-6">
@@ -160,6 +205,27 @@ export default function Home() {
 
                         <div className="space-y-4">
                             <div className="flex gap-3">
+                                <Briefcase size={16} className="text-stone-400 mt-1 shrink-0" />
+                                <div className="text-sm">
+                                    <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Past Roles</p>
+                                    <div className="space-y-2">
+                                        <div>
+                                            <p className="text-stone-800 dark:text-stone-200 leading-snug">
+                                                Amgen Scholar @ <span className="font-semibold">IIIT Hyderabad</span>
+                                            </p>
+                                            <p className="text-[10px] text-stone-400">Summer 2026</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-stone-800 dark:text-stone-200 leading-snug">
+                                                Research Intern @ <span className="font-semibold"><a href="https://mandrakebio.com" target="_blank" rel="noopener noreferrer" className="hover:underline">MandrakeBio</a></span>
+                                            </p>
+                                            <p className="text-[10px] text-stone-400">Winter 2025</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-3">
                                 <Calendar size={16} className="text-stone-400 mt-1 shrink-0" />
                                 <div className="text-sm">
                                     <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Past Project</p>
@@ -170,22 +236,11 @@ export default function Home() {
                             </div>
 
                             <div className="flex gap-3">
-                                <Briefcase size={16} className="text-stone-400 mt-1 shrink-0" />
-                                <div className="text-sm">
-                                    <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Past Role</p>
-                                    <p className="text-stone-800 dark:text-stone-200 leading-snug">
-                                        Research Intern @ <span className="font-semibold"><a href="https://mandrakebio.com">MandrakeBio</a></span>
-                                    </p>
-                                    <p className="text-[10px] text-stone-400 mt-0.5">Winter 2025</p>
-                                </div>
-                            </div>
-
-                            <div className="flex gap-3">
                                 <Award size={16} className="text-amber-500 mt-1 shrink-0" />
                                 <div className="text-sm">
-                                    <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Milestone</p>
+                                    <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Recognition</p>
                                     <p className="text-stone-800 dark:text-stone-200 leading-snug">
-                                        Amgen Scholar
+                                        Best Presentation Award @ Asia Amgen Scholars Symposium (Tokyo)
                                     </p>
                                 </div>
                             </div>

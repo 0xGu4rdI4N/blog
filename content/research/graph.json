@@ -27,9 +27,19 @@
       "tags": ["Neuroscience", "TDA", "ML"],
       "links": []
     },
+    {
+      "id": "epha2_bo",
+      "label": "Virtual Screening of EphA2 (Amgen)",
+      "type": "project",
+      "status": "past",
+      "description": "Bayesian optimization framework for ultra-large virtual screening of a 100M small-molecule library for EphA2 ligands, recovering >90% of top candidates docking ~1% of the library.",
+      "tags": ["Drug Discovery", "Bayesian Optimization", "Virtual Screening"],
+      "links": []
+    },
     { "id": "cryoet", "label": "Cryo-ET", "type": "concept" },
     { "id": "geometric_dl", "label": "Geometric Deep Learning", "type": "tool" },
     { "id": "tda", "label": "Topological Data Analysis", "type": "tool" },
+    { "id": "bayesian_opt", "label": "Bayesian Optimization", "type": "tool" },
     { "id": "genai", "label": "Generative Models", "type": "tool" },
     { "id": "struct_bio", "label": "Structural Biology", "type": "domain" },
     { "id": "drug_disc", "label": "Drug Discovery", "type": "domain" },
@@ -42,6 +52,8 @@
     { "source": "amp_design", "target": "genai", "label": "uses" },
     { "source": "amp_design", "target": "drug_disc", "label": "part of" },
     { "source": "tda_eeg", "target": "tda", "label": "uses" },
-    { "source": "tda_eeg", "target": "neuro", "label": "part of" }
+    { "source": "tda_eeg", "target": "neuro", "label": "part of" },
+    { "source": "epha2_bo", "target": "bayesian_opt", "label": "uses" },
+    { "source": "epha2_bo", "target": "drug_disc", "label": "part of" }
   ]
 }
