@@ -31,5 +31,34 @@ export const EXPERIENCES = [
 
 export const TIMELINE_ITEMS = [];
 
+export const VISION = {
+    paragraphs: [
+        `I was sitting in the library, along the shelves where there was no one except me and thousands of books. I was looking at "The Cultural Heritage of India" by Ramkrishna Mission and really felt sad that I would not come to know the great authors of this book. In that moment, I also saw books that, in my opinion, would not have been read much — and a feeling of respect for the authors who write these books even if there is not a large quantitative audience. They are the guardians of our time, our story, our legacy to the future.`,
+
+        `In that moment, something struck me. An avid reader can read around 2000 books in his/her lifetime — that's 4 lines of shelves (I counted). I wanted people to live. Live long enough to be able to read all the books that are written up to that moment. I want people to have the freedom of feeling all the variations of physical and mental experiences. Imagine when one can be a poet, painter, physicist, biologist, singer, dancer, and all that he wishes.`,
+
+        `I read somewhere that your spark will return again, and you must hold on to it. I feel this is my spark returning to me, and I will hold on this time. I will forget things — at least may not be able to recall because I live in the present — but now I know that I have had realisations, thoughts, learnings. I will live with the assurance that I did have it, and not be obsessed with holding on to it only in the form of words or thoughts. It was reality and will live in me, in my blood and skin.`,
+
+        `Moments come to go away, they say. But we should rather notice that the moments actually come to be lived first.`,
+
+        `Actually, the branch of Biosciences that focuses on human biological systems, at the root, is about longevity. A person who would otherwise die by 40 can now live to 80. So for me geroscience is not limited to only extension of ideal human age, but rather the union of all attempts that strive to improve human health.`,
+
+        `Computational Modeling has improved a lot in past few years, thanks to the pace of AI development. In my view, we have until now focused a lot on the static picture of life (a snapshot) — and that was absolutely the prerequisite — but now it's time to shift, even if partially, to the dynamics, because life is dynamic. I am particularly interested in working towards understanding human health degradation with time, and the dynamics responsible for it in the cell. The example of the cryptic switch-II pocket in KRAS nicely illustrates why protein dynamics matters: potentially druggable sites may not be obvious from a single static structure and can emerge from the conformational ensemble. Then, as has been the way generally, to transfer part of this science to computers to come up with faster ways of finding a "cure".`,
+
+        `Even the data, like scRNA-seq temporally, is made of discrete cells because imaging the cells destroys them — so trajectory finding is an approximation, and better computational models are always welcomed.`,
+    ],
+    keywords: [
+        "Longevity",
+        "Dynamics",
+        "Cell Fate",
+        "Uncertainty Quantification",
+        "Generalization",
+        "Beyond Likelihood",
+        "Causality",
+        "Compute Feasible",
+        "Simulation",
+    ],
+};
+
 
 
