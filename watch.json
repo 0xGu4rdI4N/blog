@@ -24,12 +24,16 @@
     {
      "at": "2026-10-15T06:14:58.024Z",
      "count": 2
+    },
+    {
+     "at": "2026-10-15T08:28:43.178Z",
+     "count": 2
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-15T06:14:58.024Z"
+   "lastChecked": "2026-10-15T08:28:43.178Z"
   },
   {
    "id": "d25af095-a85a-4e99-96c4-c5d523eaff5e",
@@ -106,12 +110,16 @@
     {
      "at": "2026-10-15T06:14:58.220Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-15T08:28:43.646Z",
+     "count": 4
     }
    ],
    "source": "links",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-15T06:14:58.220Z"
+   "lastChecked": "2026-10-15T08:28:43.646Z"
   },
   {
    "id": "20dfe827-9259-46e3-85b0-409a9965b015",
@@ -167,12 +175,16 @@
     {
      "at": "2026-10-15T06:14:59.190Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-15T08:28:44.358Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-15T06:14:59.190Z"
+   "lastChecked": "2026-10-15T08:28:44.358Z"
   },
   {
    "url": "https://hardwareintelligence.ai/",
@@ -252,12 +264,16 @@
     {
      "at": "2026-10-15T06:14:59.380Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-15T08:28:44.955Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-15T06:14:59.380Z"
+   "lastChecked": "2026-10-15T08:28:44.955Z"
   },
   {
    "url": "https://cuebench.dev/",
@@ -362,12 +378,16 @@
     {
      "at": "2026-10-15T06:14:59.630Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-15T08:28:45.248Z",
+     "count": 4
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-15T06:14:59.630Z"
+   "lastChecked": "2026-10-15T08:28:45.248Z"
   },
   {
    "url": "https://inkbox.ai/",
@@ -447,12 +467,16 @@
     {
      "at": "2026-10-15T06:15:00.194Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-15T08:28:46.156Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-15T06:15:00.194Z"
+   "lastChecked": "2026-10-15T08:28:46.156Z"
   },
   {
    "url": "https://www.agent37.com/",
@@ -532,12 +556,16 @@
     {
      "at": "2026-10-15T06:15:00.836Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-15T08:28:47.287Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-15T06:15:00.836Z"
+   "lastChecked": "2026-10-15T08:28:47.287Z"
   },
   {
    "url": "https://www.archgen.tech/careers/",
@@ -639,13 +667,17 @@
     {
      "at": "2026-10-15T06:15:00.931Z",
      "count": 3
+    },
+    {
+     "at": "2026-10-15T08:28:47.628Z",
+     "count": 3
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-15T06:15:00.931Z"
+   "lastChecked": "2026-10-15T08:28:47.628Z"
   }
  ],
- "updatedAt": "2026-10-15T06:15:00.932Z"
+ "updatedAt": "2026-10-15T08:28:47.628Z"
 }
