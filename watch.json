@@ -32,12 +32,16 @@
     {
      "at": "2026-10-16T08:21:54.819Z",
      "count": 2
+    },
+    {
+     "at": "2026-10-17T07:56:35.727Z",
+     "count": 2
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-16T08:21:54.819Z"
+   "lastChecked": "2026-10-17T07:56:35.727Z"
   },
   {
    "id": "d25af095-a85a-4e99-96c4-c5d523eaff5e",
@@ -73,7 +77,7 @@
      "title": "Engineering",
      "url": "https://www.corvic.ai/industries/engineering",
      "firstSeen": "2026-10-16T08:21:55.288Z",
-     "isNew": true
+     "isNew": false
     }
    ],
    "history": [
@@ -128,12 +132,16 @@
     {
      "at": "2026-10-16T08:21:55.288Z",
      "count": 5
+    },
+    {
+     "at": "2026-10-17T07:56:36.786Z",
+     "count": 5
     }
    ],
    "source": "links",
    "error": null,
-   "newCount": 1,
-   "lastChecked": "2026-10-16T08:21:55.288Z"
+   "newCount": 0,
+   "lastChecked": "2026-10-17T07:56:36.786Z"
   },
   {
    "id": "20dfe827-9259-46e3-85b0-409a9965b015",
@@ -197,12 +205,16 @@
     {
      "at": "2026-10-16T08:21:55.928Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-17T07:56:37.239Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-16T08:21:55.928Z"
+   "lastChecked": "2026-10-17T07:56:37.239Z"
   },
   {
    "url": "https://hardwareintelligence.ai/",
@@ -290,12 +302,16 @@
     {
      "at": "2026-10-16T08:21:56.319Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-17T07:56:37.575Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-16T08:21:56.319Z"
+   "lastChecked": "2026-10-17T07:56:37.575Z"
   },
   {
    "url": "https://cuebench.dev/",
@@ -408,12 +424,16 @@
     {
      "at": "2026-10-16T08:21:56.653Z",
      "count": 4
+    },
+    {
+     "at": "2026-10-17T07:56:37.781Z",
+     "count": 4
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-16T08:21:56.653Z"
+   "lastChecked": "2026-10-17T07:56:37.781Z"
   },
   {
    "url": "https://inkbox.ai/",
@@ -501,12 +521,16 @@
     {
      "at": "2026-10-16T08:21:57.357Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-17T07:56:38.535Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-16T08:21:57.357Z"
+   "lastChecked": "2026-10-17T07:56:38.535Z"
   },
   {
    "url": "https://www.agent37.com/",
@@ -594,12 +618,16 @@
     {
      "at": "2026-10-16T08:21:58.484Z",
      "count": 0
+    },
+    {
+     "at": "2026-10-17T07:56:39.488Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-16T08:21:58.484Z"
+   "lastChecked": "2026-10-17T07:56:39.488Z"
   },
   {
    "url": "https://www.archgen.tech/careers/",
@@ -709,13 +737,17 @@
     {
      "at": "2026-10-16T08:21:58.647Z",
      "count": 3
+    },
+    {
+     "at": "2026-10-17T07:56:39.647Z",
+     "count": 3
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-10-16T08:21:58.647Z"
+   "lastChecked": "2026-10-17T07:56:39.647Z"
   }
  ],
- "updatedAt": "2026-10-16T08:21:58.647Z"
+ "updatedAt": "2026-10-17T07:56:39.647Z"
 }
