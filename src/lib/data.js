@@ -37,13 +37,12 @@ export const TIMELINE_ITEMS = [];
 //   2. Add a new entry below with a unique slug, title, and that link as `docUrl`
 //   3. The page will be live at /notes/<slug>
 export const GDOC_EMBEDS = [
-    // Example (uncomment and fill in when you have a doc):
-    // {
-    //     slug: 'phd-resources',
-    //     title: 'PhD Application Resources',
-    //     description: 'A running list of resources, notes, and links for the PhD application process.',
-    //     docUrl: 'https://docs.google.com/document/d/YOUR_DOC_ID/pub',
-    // },
+    {
+        slug: 'research-practices',
+        title: 'Research Practices',
+        description: 'my points on research ',
+        docUrl: 'https://docs.google.com/document/d/1Q1seMe54rqD35d5zzkFDRtd1j75j4IWrHqnJiDmQHo4/edit?usp=sharing',
+    },
 ];
 
 export const VISION = {
