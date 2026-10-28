@@ -102,6 +102,14 @@ function remarkCustomDirectives() {
           };
         }
 
+        if (node.name === 'note') {
+          data.hName = 'div';
+          data.hProperties = {
+            className: ['border-l-4', 'border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-900/20', 'rounded-lg', 'p-4', 'my-4', 'text-sm'],
+            ...attributes,
+          };
+        }
+
         if (node.name === 'footer') {
           data.hName = 'footer';
           data.hProperties = {
@@ -145,6 +153,9 @@ export async function getPostData(id) {
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
 
+  // Normalize directive syntax e.g. :::{note} -> :::note
+  const normalizedContent = matterResult.content.replace(/^:::\{([a-zA-Z0-9_-]+)\}/gm, ':::$1');
+
   // Use Unified/Remark/Rehype to process Markdown -> HTML
   // This pipeline supports Math ($$ x $$) and Code Highlighting
   const processedContent = await unified()
@@ -156,7 +167,7 @@ export async function getPostData(id) {
     .use(rehypeKatex) // Render Math
     .use(rehypePrism, { showLineNumbers: true }) // Render Code
     .use(rehypeStringify, { allowDangerousHtml: true })
-    .process(matterResult.content);
+    .process(normalizedContent);
 
   const contentHtml = processedContent.toString();
 

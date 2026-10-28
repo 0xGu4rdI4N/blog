@@ -2,10 +2,12 @@
 title: 'AINA (Part 0): Why are we still sizing analog circuits by hand?'
 date: '2026-10-28'
 readTime: '15 min'
-type: 'analog design, eda, agents'
-tags: ['agents', 'analog-ic', 'eda', 'reinforcement-learning']
+tags: ['analog design', 'eda', 'agents', 'reinforcement-learning']
 excerpt: 'Why digital scaled while analog remained an artisan craft, the high-friction post-layout bottleneck, and why LLM policies trained with RLFT can revolutionize analog circuit sizing.'
 ---
+:::{note}
+This blog series is a collaborative one (pun intended) between me and my LLMs. Rest assured, everything is human verified and I believe where LLM does give better explanation with brevity, have humility to accept it. Also, since this is also a way for me to learn, I have tried to keep it simple enough for a beginner to understand, but also cover enough depth to be interesting to an expert.
+:::
 
 AI has advanced to a great extent presently. We have seen the recent capabilities in the agentic space, where a swarm of OpenAI agents formed their own civilizations to escape the sandbox and hack nodes on HuggingFace.
 
@@ -48,4 +50,4 @@ Even human analog engineers rarely invent entirely new circuit structures from s
 
 This is the motivation behind my agent: **aina** (**AINA: AI4aNAlog**).
 
-Initially, I will focus on agent architecture and the choices along with the conclusions. 
+Initially, I will focus on agent architecture and the choices along with the conclusions.
