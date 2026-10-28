@@ -118,6 +118,27 @@ function remarkCustomDirectives() {
           };
         }
 
+        // Handle :::dropdown[Title], :::details[Title], :::collapse[Title]
+        if (
+          (node.name === 'dropdown' || node.name === 'details' || node.name === 'collapse') &&
+          node.type === 'containerDirective'
+        ) {
+          data.hName = 'details';
+          data.hProperties = {
+            className: ['my-4', 'p-4', 'border', 'border-slate-200', 'dark:border-neutral-800', 'rounded-xl', 'bg-slate-50/50', 'dark:bg-neutral-900/30'],
+            ...attributes,
+          };
+
+          if (node.children?.[0]?.data?.directiveLabel) {
+            const summaryNode = node.children[0];
+            const sumData = summaryNode.data || (summaryNode.data = {});
+            sumData.hName = 'summary';
+            sumData.hProperties = {
+              className: ['cursor-pointer', 'font-semibold', 'text-slate-800', 'dark:text-slate-200', 'hover:text-emerald-500', 'transition-colors'],
+            };
+          }
+        }
+
         // Handle :cite[key] text directive
         if (node.name === 'cite' && node.type === 'textDirective') {
           const key = node.children?.[0]?.value || '';

@@ -55,6 +55,12 @@ export default async function Post({ params }) {
                    dark:prose-math:text-cyan-400 prose-math:text-emerald-600"
                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
+
+            {!postData.contentHtml.includes('<footer') && (
+                <footer className="mt-16 pt-8 border-t border-slate-200 dark:border-neutral-800 text-sm text-slate-500 dark:text-slate-400 italic font-serif">
+                    “If I have seen further, it is by standing on the shoulders of giants.”
+                </footer>
+            )}
         </article>
     );
 }
