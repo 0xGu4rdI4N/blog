@@ -47,3 +47,6 @@ scripts/watch/package-lock.json
 # ide
 .claude
 
+# private
+private/
+

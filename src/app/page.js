@@ -1,5 +1,3 @@
-
-
 import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 import { PUBLICATIONS, EXPERIENCES } from '../lib/data';
@@ -17,7 +15,7 @@ export default function Home() {
                     <div className="bg-stone-50 dark:bg-neutral-900/50 border border-stone-200 dark:border-neutral-800 rounded-2xl p-5 shadow-sm">
                         <div className="flex flex-col items-center text-center mb-4">
                             <div className="w-28 h-28 bg-stone-200 dark:bg-neutral-800 rounded-xl mb-3 flex items-center justify-center overflow-hidden border border-stone-300 dark:border-neutral-700 shadow-inner">
-                                <img src="/blog/images/PORTRAIT.jpg" alt="Raunak" className="w-full h-full object-cover" />
+                                <img src="/blog/images/PORTRAIT.png" alt="Raunak" className="w-full h-full object-cover" />
                             </div>
                             <h2 className="text-[10px] font-bold tracking-widest uppercase text-stone-400 mb-1">Present Commitments</h2>
                         </div>
@@ -29,10 +27,12 @@ export default function Home() {
                                     <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Current Focus</p>
                                     <ul className="space-y-3 text-stone-700 dark:text-stone-300 leading-snug">
                                         <li>
-                                            <span className="font-semibold text-black dark:text-white">Subtomogram Alignment:</span> New mathematical formulation for template free alignment
+                                            <span className="font-semibold text-black dark:text-white">
+                                                <Link href="/writings/aina_part_0" className="hover:underline hover:text-emerald-600 transition-colors">AINA</Link>:
+                                            </span> Autonomous agent for analog circuit design and sizing
                                         </li>
                                         <li>
-                                            <span className="font-semibold text-black dark:text-white">AMP Design:</span> Identifications and Generative designing of Antimicrobial Peptides
+                                            <span className="font-semibold text-black dark:text-white">Subtomogram Alignment:</span> New mathematical formulation for template free alignment
                                         </li>
                                     </ul>
                                 </div>
@@ -61,10 +61,10 @@ export default function Home() {
 
                         <div className="space-y-2 text-gray-800 dark:text-gray-300 text-[15px] leading-relaxed">
                             <p>
-                                I'm interested in <strong>AI4Science</strong>, trying to find the magna carta moment of biology and AI. Biological systems should be the next frontier to uncover the fundamental theories of physics and chemistry.
+                                I'm interested in <strong>AI4Science</strong>, particularly cell dynamics and its impact on aging and therapy. I am also pretty excited about agentic workflows, grounded in actual physics, to speed up analog design.
                             </p>
                             <p>
-                                I believe the next gen models should be blended with core scientific theories and be physics-informed by inducing inductive biases from heuristics learnt over millions of years.
+                                I believe the next gen models should be blended with core scientific theories and be physics-informed by inducing inductive biases from heuristics learnt over time.
                             </p>
                             <p>
                                 I write about my learnings and random thoughts (<Link href="/writings" className="text-emerald-600 hover:underline">blog</Link>).
@@ -84,6 +84,30 @@ export default function Home() {
                             <a href="https://www.linkedin.com/in/raunak-kumar" className="hover:underline flex items-center gap-1">linkedin</a>
                         </div>
                     </header>
+
+                    {/* Recent Writing (Pushed Above) */}
+                    <section className="mb-6">
+                        <h2 className="font-serif text-xl font-bold mb-3 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-1">
+                            Recent Writing
+                        </h2>
+                        <ul className="space-y-2">
+                            {recentPosts.map((post) => (
+                                <li key={post.id} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 group text-[15px]">
+                                    <Link href={`/writings/${post.id}`} className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-emerald-600 transition-colors">
+                                        {post.title}
+                                    </Link>
+                                    <span className="text-sm text-gray-400 font-mono shrink-0">
+                                        {post.date}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="mt-3">
+                            <Link href="/writings" className="inline-flex items-center text-sm font-bold text-emerald-600 hover:gap-2 transition-all">
+                                View all posts <ChevronRight size={14} />
+                            </Link>
+                        </div>
+                    </section>
 
                     {/* Publications */}
                     <section className="mb-6">
@@ -154,37 +178,13 @@ export default function Home() {
                         </section>
                     )}
 
-                    {/* Recent Writing */}
-                    <section className="mb-6">
-                        <h2 className="font-serif text-xl font-bold mb-3 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-1">
-                            Recent Writing
-                        </h2>
-                        <ul className="space-y-2">
-                            {recentPosts.map((post) => (
-                                <li key={post.id} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 group text-[15px]">
-                                    <Link href={`/writings/${post.id}`} className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-emerald-600 transition-colors">
-                                        {post.title}
-                                    </Link>
-                                    <span className="text-sm text-gray-400 font-mono shrink-0">
-                                        {post.date}
-                                    </span>
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="mt-3">
-                            <Link href="/writings" className="inline-flex items-center text-sm font-bold text-emerald-600 hover:gap-2 transition-all">
-                                View all posts <ChevronRight size={14} />
-                            </Link>
-                        </div>
-                    </section>
-
                     {/* Things I find cool */}
                     <section>
                         <h2 className="font-serif text-xl font-bold mb-3 text-black dark:text-white border-b border-stone-200 dark:border-neutral-800 pb-1">
                             Things I find cool
                         </h2>
                         <div className="flex flex-wrap gap-1.5">
-                            {["Drug Discovery", "Interpretability", "Protein Design", "Geometric Deep Learning", "Physics induced Models"].map(tag => (
+                            {["Chip Design", "Agents", "Drug Discovery", "Interpretability", "Protein Design", "Geometric Deep Learning", "Physics induced Models"].map(tag => (
                                 <span key={tag} className="px-3 py-1 bg-stone-100 dark:bg-neutral-900 text-stone-600 dark:text-neutral-400 rounded-full text-sm border border-stone-200 dark:border-neutral-800">
                                     {tag}
                                 </span>
@@ -230,7 +230,7 @@ export default function Home() {
                                 <div className="text-sm">
                                     <p className="font-bold text-stone-500 dark:text-stone-400 uppercase text-[10px] tracking-wider mb-1">Past Project</p>
                                     <p className="text-stone-800 dark:text-stone-200 leading-snug">
-                                        Cognitive workload classification using topological data analysis
+                                        Tabular in-context learning for multi-activity antimicrobial peptide (AMP) profiling
                                     </p>
                                 </div>
                             </div>

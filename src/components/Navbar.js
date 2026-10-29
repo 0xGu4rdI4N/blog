@@ -9,11 +9,11 @@ export default function Navbar() {
 
     const navItems = [
         { name: 'Home', path: '/' },
+        { name: 'Writings', path: '/writings' },
         { name: 'Research', path: '/research' },
         { name: 'Vision', path: '/vision' },
         { name: 'Notes', path: '/notes' },
         { name: 'Labs', path: '/labs' },
-        { name: 'Writings', path: '/writings' },
         { name: 'Extras', path: '/extras' },
     ];
 
