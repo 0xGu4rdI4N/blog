@@ -73,23 +73,7 @@ The key question is not whether an LLM or Bayesian optimization is better. It is
 
 We decompose inverse sizing into a clean closed-loop division of labor:
 
-```
-[User / Spec Sheet]
-       │
-       ▼
- 1. LLM (Interpret & Plan)
-       │ (Objectives, Constraints, Workflow)
-       ▼
- 2. Optimizer (BO / Analytical Methods)
-       │ (Proposes Transistor Sizes: W, L, I_bias)
-       ▼
- 3. EDA Engine (Ngspice + PDK)
-       │ (Live DC, AC, Transient Simulation)
-       ▼
- 4. Optimizer / LLM Feedback
-       │ (Surrogate Update / Recovery Intervention)
-       └─────────── Re-iterate to Convergence
-```
+![Closed-Loop Division of Labor](/blog/images/aina/closed_loop_division_of_labor.png)
 
 1. **LLM — Interpret and Plan**: Converts high-level user specifications into mathematical objectives, constraints, and a valid design workflow. Selects models, tools, and optimization strategies.
 2. **Optimizer — Propose Transistor Sizes**: Bayesian optimization, evolutionary algorithms, gradient-based methods, or circuit-specific analytical methods search the continuous design space.
@@ -98,14 +82,16 @@ We decompose inverse sizing into a clean closed-loop division of labor:
 
 This creates a true closed-loop design system. The LLM does not need to reason from scratch about every decimal point of every transistor dimension at every micro-iteration.
 
-### Circuit Knowledge Infused into the Agent
+:::dropdown[Circuit Knowledge Infused into the Agent (For Future Reference)]
+*Note: This structured circuit knowledge taxonomy is documented here for future reference and will be explored in later iterations of the agent; it won't be actively used in our initial baseline.*
 
-To make the LLM effective in this loop, we inject four layers of structured circuit knowledge:
+To make an advanced agent effective in this loop, four layers of structured circuit knowledge can be formulated:
 
 - **Performance–Performance Trade-offs**: How improving one specification impacts another across the circuit (e.g., boosting open-loop DC gain or gain-bandwidth product often increases DC bias current and power dissipation).
 - **Functional Role–Performance Relationships**: Which sub-circuits directly govern specific metrics (e.g., how the input differential pair controls thermal noise and input transconductance $g_m$, versus how the active current mirror load determines output impedance $r_o$).
 - **Substructure–Parameter–Performance Rules**: Detailed, local component sensitivities (e.g., increasing the aspect ratio $\frac{W}{L}$ of active load transistors alters output swing and pole locations).
 - **Design Heuristics**: General, transferable analog guidelines and rules of thumb that abstract away specific transistor IDs, allowing insights learned on a simple differential pair to be applied to a folded cascode or two-stage Miller OTA.
+:::
 
 ---
 
