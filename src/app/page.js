@@ -155,12 +155,24 @@ export default function Home() {
                                 {EXPERIENCES.map((exp, i) => (
                                     <div key={i} className="group">
                                         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
-                                            <h3 className="font-bold text-base text-gray-900 dark:text-gray-100 group-hover:text-emerald-600 transition-colors">
-                                                {exp.role} <span className="font-normal text-stone-500 dark:text-stone-400">· {exp.org}</span>
+                                            <h3 className="font-bold text-base text-emerald-600 dark:text-emerald-400">
+                                                {exp.role}
                                             </h3>
                                             <span className="text-xs text-stone-400 font-mono shrink-0">{exp.period}</span>
                                         </div>
-                                        <p className="text-xs font-semibold text-stone-600 dark:text-stone-400 mt-0.5 mb-1 italic">
+                                        {exp.org && (
+                                            <p className="text-xs text-stone-500 dark:text-stone-400 mt-0.5">
+                                                {exp.link ? (
+                                                    <a href={exp.link} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-emerald-600 dark:hover:text-emerald-400 inline-flex items-center gap-1">
+                                                        <span>{exp.org}</span>
+                                                        <span className="text-[10px] text-stone-400">↗</span>
+                                                    </a>
+                                                ) : (
+                                                    exp.org
+                                                )}
+                                            </p>
+                                        )}
+                                        <p className="text-xs font-semibold text-stone-600 dark:text-stone-400 mt-1 mb-1.5 italic">
                                             {exp.project}
                                         </p>
                                         <p className="text-stone-700 dark:text-stone-300 text-[14px] leading-relaxed">
