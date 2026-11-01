@@ -98,7 +98,7 @@ function remarkCustomDirectives() {
         if (node.name === 'pink') {
           data.hName = 'div';
           data.hProperties = {
-            className: ['border-l-4', 'border-pink-500', 'bg-pink-50', 'dark:bg-pink-900/20', 'rounded-lg', 'p-4', 'my-4'],
+            className: ['border-l-4', 'border-pink-500', 'bg-pink-50', 'dark:bg-pink-900/20', 'rounded-xl', 'p-4', 'my-5', 'text-[15px]', 'leading-relaxed'],
             ...attributes,
           };
         }
@@ -106,7 +106,7 @@ function remarkCustomDirectives() {
         if (node.name === 'note') {
           data.hName = 'div';
           data.hProperties = {
-            className: ['border-l-4', 'border-emerald-500', 'bg-emerald-50', 'dark:bg-emerald-900/20', 'rounded-lg', 'p-4', 'my-4', 'text-sm'],
+            className: ['border-l-4', 'border-emerald-500', 'bg-emerald-50/60', 'dark:bg-emerald-950/20', 'rounded-xl', 'p-4', 'my-5', 'text-[15px]', 'leading-relaxed'],
             ...attributes,
           };
         }
@@ -126,7 +126,7 @@ function remarkCustomDirectives() {
         ) {
           data.hName = 'details';
           data.hProperties = {
-            className: ['my-4', 'p-4', 'border', 'border-slate-200', 'dark:border-neutral-800', 'rounded-xl', 'bg-slate-50/50', 'dark:bg-neutral-900/30'],
+            className: ['my-4', 'p-4', 'border', 'border-slate-200', 'dark:border-neutral-800', 'rounded-xl', 'bg-slate-50/50', 'dark:bg-neutral-900/30', 'text-[15px]', 'leading-relaxed'],
             ...attributes,
           };
 

@@ -35,7 +35,7 @@ export default async function Post({ params }) {
                         </span>
                     ))}
                 </div>
-                <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-900 dark:text-slate-100">
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-slate-900 dark:text-slate-100 leading-tight">
                     {postData.title}
                 </h1>
                 <div className="flex items-center justify-center gap-6 text-sm text-slate-500 font-mono">
@@ -45,13 +45,16 @@ export default async function Post({ params }) {
             </header>
 
             {/* The Content Renderer */}
-            {/* We use 'prose' from @tailwindcss/typography to handle basic styling, 
-          then custom CSS for the specific math/code colors you wanted */}
             <div
-                className="prose prose-lg dark:prose-invert max-w-none
-                   prose-headings:font-sans prose-headings:font-bold 
-                   prose-p:font-serif prose-p:leading-loose
-                   prose-pre:bg-[#1e1e1e] prose-pre:border prose-pre:border-violet-500/20
+                className="prose dark:prose-invert max-w-none text-[16.5px] leading-relaxed
+                   prose-headings:font-sans prose-headings:tracking-tight prose-headings:font-bold
+                   prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+                   prose-h3:text-xl prose-h3:mt-7 prose-h3:mb-3
+                   prose-p:leading-relaxed prose-p:text-slate-700 dark:prose-p:text-slate-300
+                   prose-li:text-slate-700 dark:prose-li:text-slate-300
+                   prose-strong:text-slate-900 dark:prose-strong:text-slate-100
+                   prose-code:text-emerald-600 dark:prose-code:text-emerald-400 prose-code:font-mono prose-code:font-medium prose-code:before:content-none prose-code:after:content-none
+                   prose-pre:bg-[#1e1e1e] prose-pre:border prose-pre:border-neutral-800 prose-pre:rounded-xl
                    dark:prose-math:text-cyan-400 prose-math:text-emerald-600"
                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
