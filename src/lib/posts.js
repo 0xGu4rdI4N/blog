@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import rehypePrism from 'rehype-prism-plus';
 import { unified } from 'unified';
@@ -169,6 +170,23 @@ function remarkCustomDirectives() {
   };
 }
 
+// Wrap table elements in a responsive overflow wrapper
+function rehypeTableWrap() {
+  return (tree) => {
+    visit(tree, 'element', (node, index, parent) => {
+      if (node.tagName === 'table' && parent && parent.properties?.className?.indexOf?.('table-wrapper') === -1) {
+        const wrapper = {
+          type: 'element',
+          tagName: 'div',
+          properties: { className: ['table-wrapper', 'overflow-x-auto', 'my-6', 'rounded-xl', 'border', 'border-slate-200', 'dark:border-neutral-800'] },
+          children: [node],
+        };
+        parent.children[index] = wrapper;
+      }
+    });
+  };
+}
+
 export async function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -181,10 +199,12 @@ export async function getPostData(id) {
   // This pipeline supports Math ($$ x $$) and Code Highlighting
   const processedContent = await unified()
     .use(remarkParse)
+    .use(remarkGfm)
     .use(remarkMath)
     .use(remarkDirective) // Handle ::: syntax
     .use(remarkCustomDirectives) // Process our custom directives
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeTableWrap)
     .use(rehypeKatex) // Render Math
     .use(rehypePrism, { showLineNumbers: true }) // Render Code
     .use(rehypeStringify, { allowDangerousHtml: true })

@@ -4,6 +4,9 @@ date: '2026-10-28'
 readTime: '15 min'
 tags: ['analog design', 'eda', 'agents', 'reinforcement-learning']
 excerpt: 'Why digital scaled while analog remained an artisan craft, the high-friction post-layout bottleneck, and why LLM policies trained with RLFT can revolutionize analog circuit sizing.'
+nextPost:
+  slug: 'aina_part_1'
+  title: 'AINA (Part 1): Grounding Agents in Analog Physics'
 ---
 :::{note}
 This blog series is a collaborative one (pun intended) between me and my LLMs. Rest assured, everything is human verified and I believe where LLM does give better explanation with brevity, have humility to accept it. Also, since this is also a way for me to learn, I have tried to keep it simple enough for a beginner to understand, but also cover enough depth to be interesting to an expert.
@@ -51,3 +54,8 @@ Even human analog engineers rarely invent entirely new circuit structures from s
 This is the motivation behind my agent: **aina** (**AINA: AI4aNAlog**).
 
 Initially, I will focus on agent architecture and the choices along with the conclusions.
+
+---
+
+### Series Navigation
+👉 **Next:** [AINA (Part 1): Grounding Agents in Analog Physics →](/blog/writings/aina_part_1)

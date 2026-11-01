@@ -4,7 +4,17 @@ date: '2026-10-29'
 readTime: '12 min'
 tags: ['analog design', 'eda', 'agents', 'bsim4', 'ngspice', 'benchmarks']
 excerpt: 'The meaning of AINA, the custom Razavi domain reasoning benchmark, Qwen 7B vs 14B quantization findings, and building a zero-cost local agent stack with Ngspice and SkyWater 130nm PDK.'
+prevPost:
+  slug: 'aina_part_0'
+  title: 'AINA (Part 0): Why are we still sizing analog circuits by hand?'
+nextPost:
+  slug: 'aina_part_2'
+  title: 'AINA (Part 2): Agentic Flows, Inductive Biases, and Dual-Tier Memory'
 ---
+
+:::{note}
+This is **Part 1** of the **AINA** series. If you haven't read the prologue yet, check out [← Part 0: Why are we still sizing analog circuits by hand?](/blog/writings/aina_part_0).
+:::
 
 :::pink
 In Eastern languages (आईना / آئینہ), **aina** translates to **'mirror'**—an intentional homage to the foundational building block of analog circuit design, the **current mirror**.
@@ -135,4 +145,6 @@ Running live Ngspice simulations on every small code change or unit test slows d
 
 ---
 
-In **Part 2**, we will dive straight into the code: building the live Ngspice automation harness, defining our sizing MDP action space, and running our first closed-loop experiments on Task 1 of LOADBench.
+### Series Navigation
+- **Previous:** [← AINA (Part 0): Why are we still sizing analog circuits by hand?](/blog/writings/aina_part_0)
+- **Next:** [AINA (Part 2): Agentic Flows, Inductive Biases, and Dual-Tier Memory →](/blog/writings/aina_part_2)

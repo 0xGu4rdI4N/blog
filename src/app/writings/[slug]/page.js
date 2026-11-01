@@ -1,6 +1,6 @@
 import { getPostData, getSortedPostsData } from '../../../lib/posts';
 import Link from 'next/link';
-import { ChevronLeft, Calendar, Clock } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Calendar, Clock } from 'lucide-react';
 
 // This function generates the static paths for GitHub Pages export
 export async function generateStaticParams() {
@@ -55,6 +55,49 @@ export default async function Post({ params }) {
                    dark:prose-math:text-cyan-400 prose-math:text-emerald-600"
                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
+
+            {(postData.prevPost || postData.nextPost) && (
+                <nav className="mt-16 pt-8 border-t border-slate-200 dark:border-neutral-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {postData.prevPost ? (
+                        <Link
+                            href={`/writings/${postData.prevPost.slug}`}
+                            className="group p-4 rounded-xl border border-slate-200 dark:border-neutral-800 bg-slate-50/50 dark:bg-neutral-900/30 hover:border-emerald-500/50 transition-all flex flex-col justify-between"
+                        >
+                            <span className="text-xs font-mono text-stone-400 flex items-center gap-1 group-hover:text-emerald-500 transition-colors">
+                                <ChevronLeft size={14} /> Previous Part
+                            </span>
+                            <span className="font-semibold text-sm text-slate-800 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 mt-2 line-clamp-2">
+                                {postData.prevPost.title}
+                            </span>
+                        </Link>
+                    ) : (
+                        <div className="hidden sm:block" />
+                    )}
+
+                    {postData.nextPost && (
+                        postData.nextPost.comingSoon ? (
+                            <div className="p-4 rounded-xl border border-dashed border-slate-200 dark:border-neutral-800 bg-slate-50/20 dark:bg-neutral-900/10 flex flex-col justify-between opacity-60 text-right sm:items-end">
+                                <span className="text-xs font-mono text-stone-400">Next Part (Coming Soon)</span>
+                                <span className="font-semibold text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-2">
+                                    {postData.nextPost.title}
+                                </span>
+                            </div>
+                        ) : (
+                            <Link
+                                href={`/writings/${postData.nextPost.slug}`}
+                                className="group p-4 rounded-xl border border-slate-200 dark:border-neutral-800 bg-slate-50/50 dark:bg-neutral-900/30 hover:border-emerald-500/50 transition-all flex flex-col justify-between text-right sm:items-end"
+                            >
+                                <span className="text-xs font-mono text-stone-400 flex items-center gap-1 group-hover:text-emerald-500 transition-colors justify-end">
+                                    Next Part <ChevronRight size={14} />
+                                </span>
+                                <span className="font-semibold text-sm text-slate-800 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 mt-2 line-clamp-2">
+                                    {postData.nextPost.title}
+                                </span>
+                            </Link>
+                        )
+                    )}
+                </nav>
+            )}
 
             {!postData.contentHtml.includes('<footer') && (
                 <footer className="mt-16 pt-8 border-t border-slate-200 dark:border-neutral-800 text-sm text-slate-500 dark:text-slate-400 italic font-serif">
