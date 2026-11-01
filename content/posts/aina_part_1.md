@@ -142,9 +142,3 @@ Running live Ngspice simulations on every small code change or unit test slows d
 - We engineered a fast, closed-form analytic simulator based on idealized transistor physics.
 - This allows our entire 48-test test suite and CI validation pipeline to execute in **under 2 seconds completely offline**, without needing Ngspice installed or Ollama running in the background.
 :::
-
----
-
-### Series Navigation
-- **Previous:** [← AINA (Part 0): Why are we still sizing analog circuits by hand?](/blog/writings/aina_part_0)
-- **Next:** [AINA (Part 2): Agentic Flows, Inductive Biases, and Dual-Tier Memory →](/blog/writings/aina_part_2)

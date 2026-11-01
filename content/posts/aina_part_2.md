@@ -210,9 +210,3 @@ This generation is deterministic and straightforward for standardized operationa
 **Yes. Absolutely.**
 
 While architecture-level ledgers and playbooks provide immediate stability, frontier EDA AI must transition from prompt engineering to **Reinforcement Learning from Physical Feedback (RLFT / GRPO)** directly on the model weights. When the policy internalizes the qualitative Jacobian directly into its attention weights, the agent sizing loop approaches human-level intuitive sizing speed.
-
----
-
-### Series Navigation
-- **Previous:** [← AINA (Part 1): Grounding Agents in Analog Physics](/blog/writings/aina_part_1)
-- **Next:** *AINA (Part 3): Sizing Action Spaces & Post-Layout Closed Loops (Coming Soon)*

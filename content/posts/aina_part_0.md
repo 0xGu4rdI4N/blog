@@ -54,8 +54,3 @@ Even human analog engineers rarely invent entirely new circuit structures from s
 This is the motivation behind my agent: **aina** (**AINA: AI4aNAlog**).
 
 Initially, I will focus on agent architecture and the choices along with the conclusions.
-
----
-
-### Series Navigation
-👉 **Next:** [AINA (Part 1): Grounding Agents in Analog Physics →](/blog/writings/aina_part_1)
