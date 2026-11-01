@@ -174,14 +174,21 @@ function remarkCustomDirectives() {
 function rehypeTableWrap() {
   return (tree) => {
     visit(tree, 'element', (node, index, parent) => {
-      if (node.tagName === 'table' && parent && parent.properties?.className?.indexOf?.('table-wrapper') === -1) {
-        const wrapper = {
-          type: 'element',
-          tagName: 'div',
-          properties: { className: ['table-wrapper', 'overflow-x-auto', 'my-6', 'rounded-xl', 'border', 'border-slate-200', 'dark:border-neutral-800'] },
-          children: [node],
-        };
-        parent.children[index] = wrapper;
+      if (node.tagName === 'table') {
+        const parentClasses = parent?.properties?.className;
+        const isAlreadyWrapped = Array.isArray(parentClasses)
+          ? parentClasses.includes('table-wrapper')
+          : typeof parentClasses === 'string' && parentClasses.includes('table-wrapper');
+
+        if (!isAlreadyWrapped && parent && typeof index === 'number') {
+          const wrapper = {
+            type: 'element',
+            tagName: 'div',
+            properties: { className: ['table-wrapper'] },
+            children: [node],
+          };
+          parent.children[index] = wrapper;
+        }
       }
     });
   };

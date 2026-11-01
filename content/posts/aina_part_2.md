@@ -119,7 +119,7 @@ The distillation filter operates under three foundational principles:
 To evaluate this architecture, we ran both the Stateless Baseline and the Dual-Tier Memory Agent on the `SimpleTwoStageOpAmp_BottleneckTest` using live Ngspice on the SkyWater 130nm process node.
 
 | Metric | Phase 1: Stateless Baseline | Phase 2: Dual-Tier Memory Agent |
-| :--- | :--- | :--- |
+| :--- | :---: | :---: |
 | **Circuit** | `SimpleTwoStageOpAmp_BottleneckTest` | `SimpleTwoStageOpAmp_BottleneckTest` |
 | **Physics / Model** | Live Ngspice (SkyWater 130nm) | Live Ngspice (SkyWater 130nm) |
 | **Reasoning Engine** | Active Local Ollama LLM | Active Local Ollama LLM |
@@ -140,7 +140,7 @@ To evaluate this architecture, we ran both the Stateless Baseline and the Dual-T
 Next, we pitted the Dual-Tier Memory Agent against both standard **Bayesian Optimization (GP-EI)** and the **Stateless Agent Baseline**:
 
 | Category | Key Metric | Bayesian Optimization (GP-EI) | Baseline Stateless Agent | Dual-Tier Memory Agent (Ours) | Winner / Advantage |
-| :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :---: | :---: | :---: | :--- |
 | **Optimization Efficiency** | Feasibility Yield (% budget compliant) | 16.7% (5 / 30) | 0.0% (0 / 30) | **50.0% (15 / 30)** | **Dual-Tier Memory** ($3\times$ higher yield than BO) |
 | **Optimization Efficiency** | First Feasible Eval (speed to first hit) | **Eval 10** | Never (stagnated) | Eval 14 | **BO** (found first point earlier) |
 | **Optimization Efficiency** | Best Objective Loss (0.0 = 100% specs met) | **0.0000** | 0.2773 | **0.0000** | **Tie** (BO & Dual-Tier) |
