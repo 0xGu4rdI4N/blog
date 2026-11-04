@@ -104,12 +104,16 @@
     {
      "at": "2026-11-03T11:08:57.626Z",
      "count": 2
+    },
+    {
+     "at": "2026-11-04T11:18:57.786Z",
+     "count": 2
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-03T11:08:57.626Z"
+   "lastChecked": "2026-11-04T11:18:57.786Z"
   },
   {
    "id": "d25af095-a85a-4e99-96c4-c5d523eaff5e",
@@ -145,37 +149,37 @@
      "title": "Business teams",
      "url": "https://www.corvic.ai/roles/business-teams",
      "firstSeen": "2026-11-03T11:08:58.007Z",
-     "isNew": true
+     "isNew": false
     },
     {
      "title": "Analysts",
      "url": "https://www.corvic.ai/roles/analysts",
      "firstSeen": "2026-11-03T11:08:58.007Z",
-     "isNew": true
+     "isNew": false
     },
     {
      "title": "Data engineers",
      "url": "https://www.corvic.ai/roles/data-engineers",
      "firstSeen": "2026-11-03T11:08:58.007Z",
-     "isNew": true
+     "isNew": false
     },
     {
      "title": "Data scientists",
      "url": "https://www.corvic.ai/roles/data-scientists",
      "firstSeen": "2026-11-03T11:08:58.007Z",
-     "isNew": true
+     "isNew": false
     },
     {
      "title": "Developers",
      "url": "https://www.corvic.ai/roles/developers",
      "firstSeen": "2026-11-03T11:08:58.007Z",
-     "isNew": true
+     "isNew": false
     },
     {
      "title": "Data leaders",
      "url": "https://www.corvic.ai/roles/data-leaders",
      "firstSeen": "2026-11-03T11:08:58.007Z",
-     "isNew": true
+     "isNew": false
     },
     {
      "title": "Engineering",
@@ -185,10 +189,6 @@
     }
    ],
    "history": [
-    {
-     "at": "2026-10-07T09:26:13.159Z",
-     "count": 4
-    },
     {
      "at": "2026-10-07T10:27:04.330Z",
      "count": 4
@@ -304,12 +304,16 @@
     {
      "at": "2026-11-03T11:08:58.007Z",
      "count": 11
+    },
+    {
+     "at": "2026-11-04T11:18:58.247Z",
+     "count": 11
     }
    ],
    "source": "links",
    "error": null,
-   "newCount": 6,
-   "lastChecked": "2026-11-03T11:08:58.007Z"
+   "newCount": 0,
+   "lastChecked": "2026-11-04T11:18:58.247Z"
   },
   {
    "id": "20dfe827-9259-46e3-85b0-409a9965b015",
@@ -318,10 +322,6 @@
    "addedAt": "2026-10-06T16:51:44.585Z",
    "jobs": [],
    "history": [
-    {
-     "at": "2026-10-07T09:26:14.132Z",
-     "count": 0
-    },
     {
      "at": "2026-10-07T10:27:05.224Z",
      "count": 0
@@ -437,12 +437,16 @@
     {
      "at": "2026-11-03T11:08:59.069Z",
      "count": 0
+    },
+    {
+     "at": "2026-11-04T11:18:59.001Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-03T11:08:59.069Z"
+   "lastChecked": "2026-11-04T11:18:59.001Z"
   },
   {
    "url": "https://hardwareintelligence.ai/",
@@ -451,10 +455,6 @@
    "addedAt": "2026-10-01T10:20:02.788Z",
    "jobs": [],
    "history": [
-    {
-     "at": "2026-10-07T09:26:14.308Z",
-     "count": 0
-    },
     {
      "at": "2026-10-07T10:27:05.618Z",
      "count": 0
@@ -570,12 +570,16 @@
     {
      "at": "2026-11-03T11:08:59.601Z",
      "count": 0
+    },
+    {
+     "at": "2026-11-04T11:18:59.374Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-03T11:08:59.601Z"
+   "lastChecked": "2026-11-04T11:18:59.374Z"
   },
   {
    "url": "https://cuebench.dev/",
@@ -609,10 +613,6 @@
     }
    ],
    "history": [
-    {
-     "at": "2026-10-07T09:26:14.568Z",
-     "count": 4
-    },
     {
      "at": "2026-10-07T10:27:05.938Z",
      "count": 4
@@ -728,12 +728,16 @@
     {
      "at": "2026-11-03T11:08:59.942Z",
      "count": 4
+    },
+    {
+     "at": "2026-11-04T11:18:59.543Z",
+     "count": 4
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-03T11:08:59.942Z"
+   "lastChecked": "2026-11-04T11:18:59.543Z"
   },
   {
    "url": "https://inkbox.ai/",
@@ -742,10 +746,6 @@
    "addedAt": "2026-10-01T10:20:02.788Z",
    "jobs": [],
    "history": [
-    {
-     "at": "2026-10-07T09:26:15.048Z",
-     "count": 0
-    },
     {
      "at": "2026-10-07T10:27:06.614Z",
      "count": 0
@@ -861,12 +861,16 @@
     {
      "at": "2026-11-03T11:09:00.506Z",
      "count": 0
+    },
+    {
+     "at": "2026-11-04T11:19:00.025Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-03T11:09:00.506Z"
+   "lastChecked": "2026-11-04T11:19:00.025Z"
   },
   {
    "url": "https://www.agent37.com/",
@@ -875,10 +879,6 @@
    "addedAt": "2026-10-01T10:20:02.788Z",
    "jobs": [],
    "history": [
-    {
-     "at": "2026-10-07T09:26:15.721Z",
-     "count": 0
-    },
     {
      "at": "2026-10-07T10:27:07.690Z",
      "count": 0
@@ -994,12 +994,16 @@
     {
      "at": "2026-11-03T11:09:01.439Z",
      "count": 0
+    },
+    {
+     "at": "2026-11-04T11:19:00.562Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-03T11:09:01.439Z"
+   "lastChecked": "2026-11-04T11:19:00.562Z"
   },
   {
    "url": "https://www.archgen.tech/careers/",
@@ -1154,8 +1158,8 @@
    "source": "page",
    "error": "HTTP 404 for https://www.archgen.tech/careers/",
    "newCount": 0,
-   "lastChecked": "2026-11-03T11:09:01.725Z"
+   "lastChecked": "2026-11-04T11:19:00.634Z"
   }
  ],
- "updatedAt": "2026-11-03T11:09:01.725Z"
+ "updatedAt": "2026-11-04T11:19:00.635Z"
 }
