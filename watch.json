@@ -132,12 +132,16 @@
     {
      "at": "2026-11-10T11:28:04.186Z",
      "count": 2
+    },
+    {
+     "at": "2026-11-11T11:16:53.883Z",
+     "count": 2
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-10T11:28:04.186Z"
+   "lastChecked": "2026-11-11T11:16:53.883Z"
   },
   {
    "id": "d25af095-a85a-4e99-96c4-c5d523eaff5e",
@@ -213,10 +217,6 @@
     }
    ],
    "history": [
-    {
-     "at": "2026-10-13T10:50:41.327Z",
-     "count": 4
-    },
     {
      "at": "2026-10-14T08:53:54.011Z",
      "count": 4
@@ -332,12 +332,16 @@
     {
      "at": "2026-11-10T11:28:05.350Z",
      "count": 11
+    },
+    {
+     "at": "2026-11-11T11:16:54.905Z",
+     "count": 11
     }
    ],
    "source": "links",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-10T11:28:05.350Z"
+   "lastChecked": "2026-11-11T11:16:54.905Z"
   },
   {
    "id": "20dfe827-9259-46e3-85b0-409a9965b015",
@@ -346,10 +350,6 @@
    "addedAt": "2026-10-06T16:51:44.585Z",
    "jobs": [],
    "history": [
-    {
-     "at": "2026-10-13T10:50:42.142Z",
-     "count": 0
-    },
     {
      "at": "2026-10-14T08:53:55.042Z",
      "count": 0
@@ -465,12 +465,16 @@
     {
      "at": "2026-11-10T11:28:06.129Z",
      "count": 0
+    },
+    {
+     "at": "2026-11-11T11:16:55.637Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-10T11:28:06.129Z"
+   "lastChecked": "2026-11-11T11:16:55.637Z"
   },
   {
    "url": "https://hardwareintelligence.ai/",
@@ -479,10 +483,6 @@
    "addedAt": "2026-10-01T10:20:02.788Z",
    "jobs": [],
    "history": [
-    {
-     "at": "2026-10-13T10:50:42.673Z",
-     "count": 0
-    },
     {
      "at": "2026-10-14T08:53:55.254Z",
      "count": 0
@@ -598,12 +598,16 @@
     {
      "at": "2026-11-10T11:28:06.459Z",
      "count": 0
+    },
+    {
+     "at": "2026-11-11T11:16:55.999Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-10T11:28:06.459Z"
+   "lastChecked": "2026-11-11T11:16:55.999Z"
   },
   {
    "url": "https://cuebench.dev/",
@@ -637,10 +641,6 @@
     }
    ],
    "history": [
-    {
-     "at": "2026-10-13T10:50:43.101Z",
-     "count": 4
-    },
     {
      "at": "2026-10-14T08:53:55.473Z",
      "count": 4
@@ -756,12 +756,16 @@
     {
      "at": "2026-11-10T11:28:06.705Z",
      "count": 4
+    },
+    {
+     "at": "2026-11-11T11:16:56.498Z",
+     "count": 4
     }
    ],
    "source": "page",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-10T11:28:06.705Z"
+   "lastChecked": "2026-11-11T11:16:56.498Z"
   },
   {
    "url": "https://inkbox.ai/",
@@ -770,10 +774,6 @@
    "addedAt": "2026-10-01T10:20:02.788Z",
    "jobs": [],
    "history": [
-    {
-     "at": "2026-10-13T10:50:43.618Z",
-     "count": 0
-    },
     {
      "at": "2026-10-14T08:53:55.839Z",
      "count": 0
@@ -889,12 +889,16 @@
     {
      "at": "2026-11-10T11:28:07.538Z",
      "count": 0
+    },
+    {
+     "at": "2026-11-11T11:16:57.315Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-10T11:28:07.538Z"
+   "lastChecked": "2026-11-11T11:16:57.315Z"
   },
   {
    "url": "https://www.agent37.com/",
@@ -903,10 +907,6 @@
    "addedAt": "2026-10-01T10:20:02.788Z",
    "jobs": [],
    "history": [
-    {
-     "at": "2026-10-13T10:50:44.672Z",
-     "count": 0
-    },
     {
      "at": "2026-10-14T08:53:56.828Z",
      "count": 0
@@ -1022,12 +1022,16 @@
     {
      "at": "2026-11-10T11:28:08.540Z",
      "count": 0
+    },
+    {
+     "at": "2026-11-11T11:16:58.175Z",
+     "count": 0
     }
    ],
    "source": "none",
    "error": null,
    "newCount": 0,
-   "lastChecked": "2026-11-10T11:28:08.540Z"
+   "lastChecked": "2026-11-11T11:16:58.175Z"
   },
   {
    "url": "https://www.archgen.tech/careers/",
@@ -1182,8 +1186,8 @@
    "source": "page",
    "error": "HTTP 404 for https://www.archgen.tech/careers/",
    "newCount": 0,
-   "lastChecked": "2026-11-10T11:28:08.965Z"
+   "lastChecked": "2026-11-11T11:16:58.545Z"
   }
  ],
- "updatedAt": "2026-11-10T11:28:08.965Z"
+ "updatedAt": "2026-11-11T11:16:58.546Z"
 }
