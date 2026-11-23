@@ -43,6 +43,7 @@ export const GDOC_EMBEDS = [
         description: 'my points on research ',
         docUrl: 'https://docs.google.com/document/d/1Q1seMe54rqD35d5zzkFDRtd1j75j4IWrHqnJiDmQHo4/edit?usp=sharing',
     },
+
 ];
 
 export const VISION = {
